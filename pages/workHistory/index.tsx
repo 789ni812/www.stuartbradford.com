@@ -2,7 +2,7 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import "react-vertical-timeline-component/style.min.css";
 
-import { AcademicCapIcon, BriefcaseIcon,  CurrencyPoundIcon, CalculatorIcon, CogIcon, HeartIcon, ShieldCheckIcon } from '@heroicons/react/24/solid'
+import { AcademicCapIcon, BriefcaseIcon,  CalculatorIcon, CogIcon, HeartIcon, ShieldCheckIcon } from '@heroicons/react/24/solid'
 
 
 const WorkHistory = () => {
@@ -158,11 +158,6 @@ const WorkHistory = () => {
     
 
       return (
-        <>
-          <h1 className="text-5xl font-bold text-center text-gray-800">
-            Employment history
-          </h1>
-          
           <VerticalTimeline>
             {experiences.map((experience, index) => {
               const isEvenIndex = index % 2 === 0;
@@ -188,18 +183,18 @@ const WorkHistory = () => {
                       </div>
                     </div>
       
-                    <ul className="list-disc ml-5 space-y-1">
+                    
                       {experience.description.map((item, index) => (
-                        <li key={index}>{item}</li>
+                        <p key={index}>{item}</p>
                       ))}
-                    </ul>
+                    
       
                     {experience.technologies && (
                       <>
                       <p className="mt-4 font-medium">Technologies used: </p>
                       <ul className="list-disc ml-5 space-y-1">
                       {experience.technologies.map((item, index) => (
-                        <li key={index}>{item}</li>
+                        <li className="text-sm text-gray-200" key={index}>{item}</li>
                       ))}
                     </ul>
                     </>
@@ -209,7 +204,6 @@ const WorkHistory = () => {
               );
             })}
           </VerticalTimeline>
-        </>
       );
 };
 
