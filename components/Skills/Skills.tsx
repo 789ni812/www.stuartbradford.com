@@ -1,8 +1,7 @@
 const Skills = () => {
     return (
-        <>
-
-            <div className="grid lg:mb-0 lg:grid-cols-2 lg:text-left">
+        <div className="grid lg:grid-cols-2 gap-4">
+            <div className="lg:text-left">
                 <h3 className="mb-3 text-1xl font-semibold">Technical:</h3>
                 <ul className="mb-3  text-sm">
                     <li>Full Stack Development</li>
@@ -21,7 +20,7 @@ const Skills = () => {
                 {/* <p>Currently studying Unity and C# for VR development</p> */}
             </div>
 
-            <div className="grid lg:mb-0 lg:grid-cols-2 lg:text-left">
+            <div className="lg:text-left">
                 <h3 className="mb-3 text-1xl font-semibold">Project Management:</h3>
                 <ul className="mb-3 text-sm">
                     <li>Agile Methodologies</li>
@@ -33,8 +32,7 @@ const Skills = () => {
                     <li>Team Hiring and management</li>
                 </ul>
             </div>
-        </>
-
+        </div>
     )
 }
 
