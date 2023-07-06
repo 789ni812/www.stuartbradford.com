@@ -30,7 +30,7 @@ const Skills = () => {
                     <li>Requirements Gathering</li>
                     <li>Resource Allocation</li>
                     <li>Budget and Timeline Control</li>
-                    <li>Team Hiring</li>
+                    <li>Team Hiring and management</li>
                 </ul>
             </div>
         </>

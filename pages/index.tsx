@@ -13,10 +13,12 @@ export default function Home() {
             >
                 {/* <div className="bg-gradient-to-b bg-opacity-10 from-green-400 to-black via-transparent flex-col  justify-between px-16 pt-2"> */}
                 {/* <div className="bg-gradient-to-bl from-green-400 to-green-200 shadow-lg flex-col  justify-between px-16 pt-2"> */}
-                <div className="bg-gradient-to-bl from-green-400 to-black via-transparent flex-col  justify-between px-16 pt-2">
+                <div className="flex-col  justify-between px-16 pt-2">
                     <h1 className="lg:text-2xl lg:text-center text-2xl text-gray-300 mb-3 mx-3 text-right">
                         stuartbradford.com
                     </h1>
+
+
 
                     <header className="text-right">
                         <ContactInfo />
