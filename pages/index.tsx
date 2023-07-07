@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import ProfessionalSummary from '@/components/ProfessionalSummary/ProfessionalSummary'
 import Skills from '@/components/Skills/Skills'
 import WorkHistory from '@/components/WorkHistory/WorkHistory'
@@ -5,9 +6,16 @@ import ContactInfo from '@/components/ContactInfo/ContactInfo'
 import ContentCard from '@/components/ContentCard/ContentCard'
 
 
+
 export default function Home() {
     return (
         <>
+        <div>
+            <Head>
+                <title>Stuart Bradford</title>
+                <meta name="description" content="Stuart Bradford's Resume, Full Stack Developer & Technical Project Manager" />
+                </Head>
+        </div>
             <main className="">
                 <div className="bg-[url(/images/background-WebCode.png)] bg-no-repeat bg-cover h-screen w-screen-1">
                 <div className="flex-col  justify-between px-4 md:px-32 lg:px-64 pt-2  bg-gray-800 bg-opacity-80">
