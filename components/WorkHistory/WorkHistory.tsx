@@ -18,8 +18,7 @@ const experiences = [
             "As the first full-time developer at MyMynd, I undertook the critical task of migrating the original platform from an external US agency to an in-house solution, thereby reducing dependencies and enhancing operational efficiency.",
             "Conceptualised, rebuilt, and maintained the comprehensive assessment platform and wellness centre, resulting in improved user engagement and satisfaction.",
             "As the team scaled, I transitioned into specializing in front-end development, keeping a strong emphasis on web accessibility, ensuring the design and usability cater to a diverse set of users.",
-            "As the team expanded I focused more on the Front End Side of the platform with web accessibility being a key part of the design",
-            "Implemented data analytics and business intelligence by creating multiple assets through Google Analytics, Mixpanel, and QuickSight."
+            "Implemented data analytics and business intelligence by creating multiple assets through Google Analytics, Mixpanel and QuickSight to provide actionable insights to the business.",
         ],
         clientsWorkedWith: [
             "NHS",
@@ -43,7 +42,7 @@ const experiences = [
             end: "Feb 2021"
         },
         description: [
-            "I dedicated the subsequent year to studying and resharpening my skills with particular attention given to ReactJS and its ecosystem."
+            "I dedicated the subsequent year to studying and resharpening my skills with particular attention given to ReactJS and its ecosystem such as NextJS, TypeScript, GraphQL, and AWS.",
         ],
         technologies: [
             "Javascript",
