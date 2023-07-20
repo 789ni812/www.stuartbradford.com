@@ -1,5 +1,5 @@
 import { GetStaticProps, GetStaticPaths } from "next";
-import { getFileBySlug, getFiles } from "../../lib/mdx";
+import { getFileBySlug, getFiles } from "../../lib/post";
 import { MDXRemoteSerializeResult } from "next-mdx-remote/dist/types";
 import { MDXRemote } from "next-mdx-remote";
 import matter from "gray-matter";
