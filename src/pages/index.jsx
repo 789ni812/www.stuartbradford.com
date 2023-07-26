@@ -24,7 +24,7 @@ import image5 from '@/images/photos/image-5.jpg'
 import { formatDate } from '@/lib/formatDate'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
-import WorkHistory from 'components-orig/WorkHistory/WorkHistory'
+import WorkHistory from '@/components/Resume/WorkHistory'
 
 function MailIcon(props) {
   return (
@@ -250,6 +250,7 @@ function Photos() {
 export default function Home({ articles }) {
   return (
     <>
+    
       <Head>
         <title>
           Stuart Bradford -  Versatile Full Stack Developer, Technical Project Manager and VR Enthusiast
@@ -280,10 +281,19 @@ export default function Home({ articles }) {
             />
           </div>
         </div>
+
       </Container>
       {/* <Photos /> */}
       <Container className="mt-24 md:mt-28">
+      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+        <BriefcaseIcon className="h-6 w-6 flex-none" />
+        <span className="ml-3">Work</span>
+      </h2>
+      <WorkHistory />
+      </Container>
+      <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
+        
           {/* <div className="flex flex-col gap-16">
             {articles.map((article) => (
               <Article key={article.slug} article={article} />
@@ -293,11 +303,7 @@ export default function Home({ articles }) {
             {/* <Newsletter /> */}
 
             {/* <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"> */}
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <BriefcaseIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Work</span>
-      </h2>
-            <WorkHistory />
+     
 </div>
             {/* <Resume /> */}
           {/* </div> */}
