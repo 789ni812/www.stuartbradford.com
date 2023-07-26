@@ -1,10 +1,10 @@
 const Skills = () => {
     return (
-        <div className="grid lg:grid-cols-2 gap-4">
+        <div className="grid lg:grid-cols-2 gap-4 text-zinc-800 dark:text-zinc-100">
             <div className="lg:text-left">
                 <h3 className="mb-3 text-1xl font-semibold">Technical:</h3>
                 <ul className="mb-3  text-sm">
-                    <li>Full Stack Development</li>
+                {/* <ul> */}
                     <li>React JS</li>
                     <li>JavaScript</li>
                     <li>HTML</li>
@@ -22,7 +22,7 @@ const Skills = () => {
 
             <div className="lg:text-left">
                 <h3 className="mb-3 text-1xl font-semibold">Project Management:</h3>
-                <ul className="mb-3 text-sm">
+                <ul className="mb-3 text-sm ">
                     <li>Agile Methodologies</li>
                     <li>Certified Scrum Master</li>
                     <li>Kanban / Scrum / Jira</li>

@@ -25,6 +25,7 @@ import { formatDate } from '@/lib/formatDate'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 import WorkHistory from '@/components/Resume/WorkHistory'
+import Skills from '@/components/Skills/Skills'
 
 function MailIcon(props) {
   return (
@@ -250,7 +251,6 @@ function Photos() {
 export default function Home({ articles }) {
   return (
     <>
-    
       <Head>
         <title>
           Stuart Bradford -  Versatile Full Stack Developer, Technical Project Manager and VR Enthusiast
@@ -287,7 +287,14 @@ export default function Home({ articles }) {
       <Container className="mt-24 md:mt-28">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <BriefcaseIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Work</span>
+        <span className="ml-3 mb-6">Skills</span>
+      </h2>
+      <Skills />
+      </Container>
+      <Container className="mt-24 md:mt-28">
+      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+        <BriefcaseIcon className="h-6 w-6 flex-none" />
+        <span className="ml-3 mb-6">Work</span>
       </h2>
       <WorkHistory />
       </Container>
