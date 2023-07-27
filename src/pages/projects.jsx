@@ -4,46 +4,22 @@ import Image from 'next/image'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
 
 const projects = [
   {
-    name: 'Planetaria',
+    name: 'Tai Chi Practice',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
+      'A website about Tai Chi, using NextJS, Shopify, SanityCMS.',
+    link: { href: 'http://taichipractice.zone', label: 'taichipractice.zone' },
     logo: logoPlanetaria,
   },
   {
-    name: 'Animaginary',
+    name: 'Project Boost',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
+      'To help in learning and better understand how to build games and applications in Virtual Reality I first need to get an understanding of 3D game development. So I recently completed a Unity course on just that. As part of this training course I built a game about flying a rocket through a series of obstacles, using Unity and C#. I&apos;ve added a couple of tweaks to it and exported it to the web using WebGL. it&apos;s not polished, but it really helped me understand the basics of 3D game development and has helped me greatly in my VR development practice.',
     link: { href: '#', label: 'github.com' },
     logo: logoAnimaginary,
-  },
-  {
-    name: 'HelioStream',
-    description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
-  },
-  {
-    name: 'cosmOS',
-    description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
-  },
-  {
-    name: 'OpenShuttle',
-    description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
   },
 ]
 
@@ -62,15 +38,15 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Projects - Spencer Sharp</title>
+        <title>Projects - Stuart Bradford</title>
         <meta
           name="description"
-          content="Things I’ve made trying to put my dent in the universe."
+          content="A couple of projects I'm working on."
         />
       </Head>
       <SimpleLayout
-        title="Things I’ve made trying to put my dent in the universe."
-        intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+        title="A couple of projects I'm working on."
+        intro="I'm always working on something, Here are a few of the things I'm working on right now."
       >
         <ul
           role="list"
