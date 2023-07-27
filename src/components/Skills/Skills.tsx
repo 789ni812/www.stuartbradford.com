@@ -1,38 +1,61 @@
+const technology = [
+        { id: 1, name: "React JS" },
+        { id: 2, name: "JavaScript" },
+        { id: 3, name: "HTML" },
+        { id: 4, name: "CSS" },
+        { id: 5, name: "AWS" },
+        { id: 6, name: "Firebase" },
+        { id: 7, name: "Node JS" },
+        { id: 8, name: "NGINX" },
+        { id: 9, name: "Apache" },
+        { id: 10, name: "Linux / Windows" },
+        { id: 11, name: "Drupal / WordPress" }   
+]
+
+const pm = [
+    { id: 1, name: "Agile Methodologies" },
+    { id: 2, name: "Certified Scrum Master" },
+    { id: 3, name: "Kanban / Scrum / Jira" },
+    { id: 4, name: "Requirements Gathering" },
+    { id: 5, name: "Resource Allocation" },
+    { id: 6, name: "Budget and Timeline Control" },
+    { id: 7, name: "Team Hiring and management" }
+]
+
 const Skills = () => {
     return (
-        <div className="grid lg:grid-cols-2 gap-4 text-zinc-800 dark:text-zinc-100">
-            <div className="lg:text-left">
+        <>
+            <div className="grid sm:grid-cols-2 gap-4 text-zinc-800 dark:text-zinc-100 sm:text-left">
                 <h3 className="mb-3 text-1xl font-semibold">Technical:</h3>
-                <ul className="mb-3  text-sm">
-                {/* <ul> */}
-                    <li>React JS</li>
-                    <li>JavaScript</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>AWS</li>
-                    <li>Firebase</li>
-                    <li>Node JS</li>
-                    <li>NGINX</li>
-                    <li>Apache</li>
-                    <li>Linux / Windows</li>
-                    <li>Drupal / WordPress</li>
-                </ul>
+                
+                <ul role="list" className="divide-y divide-gray-200">
+                {technology.map((item) => (
+                    <li key={item.id} className="py-4">
+                        {item.name}
+                    </li>
+                ))}
+            </ul>
                 {/* <p>Currently studying Unity and C# for VR development</p> */}
             </div>
 
-            <div className="lg:text-left">
+            <div className="grid sm:mb-0 sm:grid-cols-2 sm:text-left text-zinc-800 dark:text-zinc-100 mt-16">
                 <h3 className="mb-3 text-1xl font-semibold">Project Management:</h3>
-                <ul className="mb-3 text-sm ">
-                    <li>Agile Methodologies</li>
-                    <li>Certified Scrum Master</li>
-                    <li>Kanban / Scrum / Jira</li>
-                    <li>Requirements Gathering</li>
-                    <li>Resource Allocation</li>
-                    <li>Budget and Timeline Control</li>
-                    <li>Team Hiring and management</li>
-                </ul>
+                <ul role="list" className="divide-y divide-gray-200">
+                {pm.map((item) => (
+                    <li key={item.id} className="py-4">
+                        {item.name}
+                    </li>
+                ))}
+            </ul>
             </div>
-        </div>
+
+
+
+
+
+           
+
+        </>
     )
 }
 

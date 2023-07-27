@@ -257,7 +257,7 @@ export default function Home({ articles }) {
         </title>
         <meta
           name="description"
-          content="I’m Stuart, a full stack developer, technical project manager and VR enthusiast based in South East London UK. I have over 20 years experience building, managing and maintaining Web and Mobile applications across many sectors from start ups to banking."
+          content="I&apos;m Stuart, a full stack developer, technical project manager and VR enthusiast based in South East London UK. I have over 20 years experience building, managing and maintaining Web and Mobile applications across many sectors from startups to banking."
         />
       </Head>
       <Container className="mt-9">
@@ -266,7 +266,7 @@ export default function Home({ articles }) {
           Versatile Full Stack Developer, Technical Project Manager
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          I'm Stuart, a full stack developer, technical project manager and VR enthusiast based in South East London UK. I have over 20 years experience building, managing and maintaining Web and Mobile applications across many sectors from start ups to banking."
+          I&apos;m Stuart, a full stack developer, technical project manager and VR enthusiast based in South East London UK. I have over 20 years experience building, managing and maintaining Web and Mobile applications across many sectors from startups to banking.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
