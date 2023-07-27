@@ -1,25 +1,32 @@
 import Head from 'next/head'
 import Image from 'next/image'
-
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import logoAnimaginary from '@/images/logos/animaginary.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
+import image1 from '@/images/photos/image-1.jpg'
+import taiChiPracticeImage from '@/images/projects/taichi-expert-studying-with-books.avif'
+import projectBoostImage from '@/images/projects/GameProjectBoost.png'
+
 
 const projects = [
   {
     name: 'Tai Chi Practice',
     description:
-      'A website about Tai Chi, using NextJS, Shopify, SanityCMS.',
+      ['A website about Tai Chi, using NextJS, Shopify, SanityCMS.'],
     link: { href: 'http://taichipractice.zone', label: 'taichipractice.zone' },
     logo: logoPlanetaria,
+    imageLogo: taiChiPracticeImage
   },
   {
     name: 'Project Boost',
-    description:
-      'To help in learning and better understand how to build games and applications in Virtual Reality I first need to get an understanding of 3D game development. So I recently completed a Unity course on just that. As part of this training course I built a game about flying a rocket through a series of obstacles, using Unity and C#. I&apos;ve added a couple of tweaks to it and exported it to the web using WebGL. it&apos;s not polished, but it really helped me understand the basics of 3D game development and has helped me greatly in my VR development practice.',
-    link: { href: '#', label: 'github.com' },
+    description: [
+        'To help in learning and better understand how to build games and applications in Virtual Reality I first need to get an understanding of 3D game development. So I recently completed a Unity course on just that. As part of this training course I built a game about flying a rocket through a series of obstacles, using Unity and C#.',
+        'I\'ve added a couple of tweaks to it and exported it to the web using WebGL. it\'s not polished, but it really helped me understand the basics of 3D game development and has helped me greatly in my VR development practice.',  
+    ],
+    link: { href: '/public/games/ProjectBoost/index.html', label: 'Project Boost' },
     logo: logoAnimaginary,
+    imageLogo: projectBoostImage
   },
 ]
 
@@ -34,7 +41,10 @@ function LinkIcon(props) {
   )
 }
 
+
+
 export default function Projects() {
+    
   return (
     <>
       <Head>
@@ -54,9 +64,14 @@ export default function Projects() {
         >
           {projects.map((project) => (
             <Card as="li" key={project.name}>
+
+
+
+
+
               <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                 <Image
-                  src={project.logo}
+                  src={project.imageLogo}
                   alt=""
                   className="h-8 w-8"
                   unoptimized
@@ -65,7 +80,11 @@ export default function Projects() {
               <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
                 <Card.Link href={project.link.href}>{project.name}</Card.Link>
               </h2>
-              <Card.Description>{project.description}</Card.Description>
+              <Card.Description>{project.description.map((item) => (
+                <p key={item} className="pt-4">{item}</p>
+              ))}</Card.Description>
+              
+              
               <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
                 <LinkIcon className="h-6 w-6 flex-none" />
                 <span className="ml-2">{project.link.label}</span>
@@ -74,6 +93,7 @@ export default function Projects() {
           ))}
         </ul>
       </SimpleLayout>
+
     </>
   )
 }
