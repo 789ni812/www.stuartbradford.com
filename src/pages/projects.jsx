@@ -4,7 +4,7 @@ import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import logoAnimaginary from '@/images/logos/animaginary.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
-import image1 from '@/images/photos/image-1.jpg'
+
 import taiChiPracticeImage from '@/images/projects/taichi-expert-studying-with-books.avif'
 import projectBoostImage from '@/images/projects/GameProjectBoost.png'
 
@@ -14,6 +14,7 @@ const projects = [
     name: 'Tai Chi Practice',
     description:
       ['A website about Tai Chi, using NextJS, Shopify, SanityCMS.'],
+    technologies: ['NextJS', 'Shopify', 'SanityCMS'],
     link: { href: 'http://taichipractice.zone', label: 'taichipractice.zone' },
     logo: logoPlanetaria,
     imageLogo: taiChiPracticeImage
@@ -21,9 +22,9 @@ const projects = [
   {
     name: 'Project Boost',
     description: [
-        'To help in learning and better understand how to build games and applications in Virtual Reality I first need to get an understanding of 3D game development. So I recently completed a Unity course on just that. As part of this training course I built a game about flying a rocket through a series of obstacles, using Unity and C#.',
-        'I\'ve added a couple of tweaks to it and exported it to the web using WebGL. it\'s not polished, but it really helped me understand the basics of 3D game development and has helped me greatly in my VR development practice.',  
+        "To help in learning and better understand how to build games and applications in Virtual Reality I first need to get an understanding of 3D game development. So I recently completed a Unity course on just that. As part of this training course I built a game about flying a rocket through a series of obstacles, using Unity and C#. I've added a couple of tweaks to it and exported it to the web using WebGL. it's very basic, but really helped me understand the basics of 3D game development and has helped me greatly in my VR development practice.",
     ],
+    technologies: ['Unity', 'C#', 'WebGL'],
     link: { href: '/public/games/ProjectBoost/index.html', label: 'Project Boost' },
     logo: logoAnimaginary,
     imageLogo: projectBoostImage
@@ -78,7 +79,7 @@ export default function Projects() {
                 />
               </div>
               <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                <Card.Link href={project.link.href}>{project.name}</Card.Link>
+                <Card.Link href={project.link.href} target_blank>{project.name}</Card.Link>
               </h2>
               <Card.Description>{project.description.map((item) => (
                 <p key={item} className="pt-4">{item}</p>

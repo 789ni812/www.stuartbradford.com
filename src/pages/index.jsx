@@ -2,20 +2,12 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
-
-import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import {
   GitHubIcon,
-  InstagramIcon,
   LinkedInIcon,
-  TwitterIcon,
 } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
 import code from '@/images/photos/code.png'
 import vRDesign from '@/images/photos/vr_design.png'
 import tShirt1 from '@/images/photos/t-shirt1.png'
@@ -109,10 +101,6 @@ function SocialLink({ icon: Icon, ...props }) {
   )
 }
 
-
-
-
-
 function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
 
@@ -191,12 +179,6 @@ export default function Home({ articles }) {
               <Article key={article.slug} article={article} />
             ))}
           </div>
-          <div className="space-y-10 lg:pl-16 xl:pl-24">
-            {/* <Newsletter /> */}
-
-            {/* <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"> */}
-     
-</div>
             {/* <Resume /> */}
           {/* </div> */}
         </div>
