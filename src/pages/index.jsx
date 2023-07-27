@@ -19,6 +19,7 @@ import { getAllArticles } from '@/lib/getAllArticles'
 import WorkHistory from '@/components/Resume/WorkHistory'
 import Skills from '@/components/Skills/Skills'
 
+
 function MailIcon(props) {
   return (
     <svg
@@ -131,13 +132,17 @@ function Photos() {
 export default function Home({ articles }) {
   return (
     <>
+
+
+
+  
       <Head>
         <title>
           Stuart Bradford -  Versatile Full Stack Developer, Technical Project Manager and VR Enthusiast
         </title>
         <meta
           name="description"
-          content="I&apos;m Stuart, a full stack developer, technical project manager and VR enthusiast based in South East London UK. I have over 20 years experience building, managing and maintaining Web and Mobile applications across many sectors from startups to banking."
+          content="I'm Stuart, a full stack developer, technical project manager and VR enthusiast based in South East London UK. I have over 20 years experience building, managing and maintaining Web and Mobile applications across many sectors from startups to banking."
         />
       </Head>
       <Container className="mt-9">
