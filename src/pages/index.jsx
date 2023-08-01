@@ -142,16 +142,15 @@ export default function Home({ articles }) {
         </title>
         <meta
           name="description"
-          content="I'm Stuart, a full stack developer, technical project manager and VR enthusiast based in South East London UK. I have over 20 years experience building, managing and maintaining Web and Mobile applications across many sectors from startups to banking."
-        />
+          content="I'm Stuart, Proficient and accomplished Full Stack Developer with over two decades of experience in the technology sector. Specialises in development and delivery of digital projects for Web, Android, IOS, and Virtual Reality. Excels in software engineering, project management, and VR development, having worked in diverse sectors such as Startups, Government, Health, and E-commerce. Has established a strong track record of migrating platforms in-house, enhancing operational efficiency, and improving user engagement."
+         />
       </Head>
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
           Versatile Full Stack Developer, Technical Project Manager
           </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          I&apos;m Stuart, a full stack developer, technical project manager and VR enthusiast based in South East London UK. I have over 20 years experience building, managing and maintaining Web and Mobile applications across many sectors from startups to banking.
+          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">I&apos;m Stuart, a Full Stack Developer with over two decades of experience in the technology sector. Specialising in development and delivery of digital projects for Web, Android, IOS, and Virtual Reality. Excels in software engineering, project management, and VR development, having worked in diverse sectors such as Startups, Government, Health, and E-commerce. Has consistently demonstrated effective project management abilities, coupled with a strong focus on full stack development, these initiatives have consistently improved user engagement and overall project success.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
@@ -170,13 +169,10 @@ export default function Home({ articles }) {
       </Container>
       <Photos />
       <Container className="mt-24 md:mt-28">
-      <h2 className="flex text-lg font-semibold text-zinc-900 dark:text-zinc-100">
-        <BriefcaseIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3 mb-6">Skills</span>
-      </h2>
+      
       <Skills />
       </Container>
-      <Container className="mt-24 md:mt-28">
+      {/* <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
         
           <div className="flex flex-col gap-16">
@@ -184,10 +180,10 @@ export default function Home({ articles }) {
               <Article key={article.slug} article={article} />
             ))}
           </div>
-            {/* <Resume /> */}
-          {/* </div> */}
+            <Resume />
+        
         </div>
-      </Container>
+      </Container> */}
       <Container className="mt-24 md:mt-28">
       <h2 className="flex text-lg font-semibold text-zinc-900 dark:text-zinc-100">
         <BriefcaseIcon className="h-6 w-6 flex-none" />

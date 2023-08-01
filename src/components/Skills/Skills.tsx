@@ -19,61 +19,101 @@ import { faMoneyBill } from '@fortawesome/free-solid-svg-icons'
 import { faUsers } from '@fortawesome/free-solid-svg-icons'
 import { faCheckSquare } from '@fortawesome/free-solid-svg-icons'
 import { faClipboardList } from '@fortawesome/free-solid-svg-icons'
+import { faCode } from '@fortawesome/free-solid-svg-icons'
+import { faCogs } from '@fortawesome/free-solid-svg-icons'
+import { faPerson } from '@fortawesome/free-solid-svg-icons'
+import { faBrain } from '@fortawesome/free-solid-svg-icons'
+import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 
 
+
+const languages = [
+    { name: "JavaScript", icon: faJs },
+    { name: "HTML", icon: faHtml5 },
+    { name: "CSS", icon: faCss3 },
+    { name: "C#", icon: faCode },
+    { name: "TypeScript", icon: faCode }
+]
+
+
+const environments = [
+    { name: "React JS", icon: faReact },
+    { name: "AWS", icon: faAws },
+    { name: "Firebase", icon: faDatabase },
+    { name: "Node JS", icon: faNode },
+    { name: "NGINX", icon: faServer },
+    { name: "Apache", icon: faServer },
+    { name: "Linux", icon: faLinux },
+    { name: "Windows", icon: faWindows },
+    { name: "Drupal", icon: faDrupal },
+    { name: "WordPress", icon: faWordpress },
+    { name: "Unity", icon: faCode }
+]
 
 const technology = [
-    { id: 1, name: "React JS", icon: faReact },
-    { id: 2, name: "JavaScript", icon: faJs },
-    { id: 3, name: "HTML", icon: faHtml5 },
-    { id: 4, name: "CSS", icon: faCss3 },
-    { id: 5, name: "AWS", icon: faAws },
-    { id: 6, name: "Firebase", icon: faDatabase },
-    { id: 7, name: "Node JS", icon: faNode },
-    { id: 8, name: "NGINX", icon: faServer },
-    { id: 9, name: "Apache", icon: faServer },
-    { id: 10, name: "Linux", icon: faLinux },
-    { id: 10, name: "Windows", icon: faWindows },
-    { id: 11, name: "Drupal", icon: faDrupal },
-    { id: 12, name: "WordPress", icon: faWordpress },
+    { name: "React JS", icon: faReact },
+    { name: "JavaScript", icon: faJs },
+    { name: "HTML", icon: faHtml5 },
+    { name: "CSS", icon: faCss3 },
+    { name: "AWS", icon: faCode },
+    { name: "Firebase", icon: faDatabase },
+    { name: "Node JS", icon: faNode },
+    { name: "NGINX", icon: faServer },
+    { name: "Apache", icon: faServer },
+    { name: "Linux", icon: faLinux },
+    { name: "Windows", icon: faWindows },
+    { name: "Drupal", icon: faDrupal },
+    { name: "WordPress", icon: faWordpress },
 ]
 
 const pm = [
-    { id: 1, name: "Agile Methodologies", icon: faSyncAlt },
-    { id: 2, name: "Certified Scrum Master" , icon: faCertificate},
-    { id: 3, name: "Kanban / Scrum / Jira", icon: faChartLine },
-    { id: 4, name: "Requirements Gathering", icon: faCheckSquare },
-    { id: 5, name: "Resource Allocation", icon: faClipboardList },
-    { id: 6, name: "Budget and Timeline Control", icon: faMoneyBill },
-    { id: 7, name: "Team Hiring and management", icon: faUsers }
+    { name: "Agile Methodologies", icon: faSyncAlt },
+    { name: "Certified Scrum Master", icon: faCertificate },
+    { name: "Kanban / Scrum / Jira", icon: faChartLine },
+    { name: "Requirements Gathering", icon: faCheckSquare },
+    { name: "Resource Allocation", icon: faClipboardList },
+    { name: "Budget and Timeline Control", icon: faMoneyBill },
+    { name: "Team Hiring and management", icon: faUsers }
+]
+
+const skills = [
+    { name: "Full Stack Development", icon: faCode }, { name: "Software Engineering", icon: faCogs }, { name: "Web Accessibility Design", icon: faPerson }, { name: "Business Intelligence", icon: faBrain }, { name: "UI/UX experience", icon: faClipboardList }, { name: "Global Web Presence Management", icon: faGlobe }, { name: "IT Infrastructure & Server Management", icon: faServer }, { name: "SEO", icon: faClipboardList }
 ]
 
 const Skills = () => {
     return (
         <>
-            <div className="grid sm:grid-cols-2 gap-4 text-zinc-800 dark:text-zinc-100 sm:text-left">
-                <h3 className="mb-3 text-1xl font-semibold">Technical:</h3>
-
+            <div className="grid pt-16 sm:grid-cols-2 gap-4 text-zinc-800 dark:text-zinc-100 sm:text-left">
+                <h3 className="mb-3 text-1xl font-semibold">Languages:</h3>
                 <ul role="list" className="divide-y divide-gray-200">
-                    {technology.map((item) => (
-                        <li key={item.id} className="py-4 flex items-center">
+                    {languages.map((item) => (
+                        <li key={item.name} className="py-4 flex items-center">
                             <FontAwesomeIcon icon={item.icon} className="h-6 w-6 mr-2" />
                             <span className="ml-3">{item.name}</span>
                         </li>
                     ))}
                 </ul>
-
-                {/* <p>Currently studying Unity and C# for VR development</p> */}
             </div>
 
-            <div className="grid sm:mb-0 sm:grid-cols-2 sm:text-left text-zinc-800 dark:text-zinc-100 mt-16">
-                <h3 className="mb-3 text-1xl font-semibold">Project Management:</h3>
+            <div className="grid pt-16 sm:grid-cols-2 gap-4 text-zinc-800 dark:text-zinc-100 sm:text-left">
+                <h3 className="mb-3 text-1xl font-semibold">Environments:</h3>
                 <ul role="list" className="divide-y divide-gray-200">
-                    {pm.map((item) => (
-                        <li key={item.id} className="py-4 flex items-center">
-                        <FontAwesomeIcon icon={item.icon} className="h-6 w-6 mr-2" />
-                        <span className="ml-3">{item.name}</span>
-                    </li>
+                    {environments.map((item) => (
+                        <li key={item.name} className="py-4 flex items-center">
+                            <FontAwesomeIcon icon={item.icon} className="h-6 w-6 mr-2" />
+                            <span className="ml-3">{item.name}</span>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+            <div className="grid pt-8 sm:mb-0 sm:grid-cols-2 sm:text-left text-zinc-800 dark:text-zinc-100 mt-16">
+                <h3 className="mb-3 text-1xl font-semibold">Skills:</h3>
+                <ul role="list" className="divide-y divide-gray-200">
+                    {skills.map((item) => (
+                        <li key={item.name} className="py-4 flex items-center">
+                            <FontAwesomeIcon icon={item.icon} className="h-6 w-6 mr-2" />
+                            <span className="ml-3">{item.name}</span>
+                        </li>
                     ))}
                 </ul>
             </div>
