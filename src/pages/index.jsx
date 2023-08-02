@@ -14,7 +14,7 @@ import tShirt1 from '@/images/photos/t-shirt1.png'
 import projectBoost from '@/images/projects/GameProjectBoost.png'
 import taiChiPractice from '@/images/projects/taichi-expert-studying-with-books.avif'
 import { formatDate } from '@/lib/formatDate'
-import { generateRssFeed } from '@/lib/generateRssFeed'
+// import { generateRssFeed } from '@/lib/generateRssFeed'
 // import { getAllArticles } from '@/lib/getAllArticles'
 import WorkHistory from '@/components/Resume/WorkHistory'
 import Skills from '@/components/Skills/Skills'
@@ -196,16 +196,16 @@ export default function Home({ articles }) {
   )
 }
 
-export async function getStaticProps() {
-  if (process.env.NODE_ENV === 'production') {
-    await generateRssFeed()
-  }
+// export async function getStaticProps() {
+//   if (process.env.NODE_ENV === 'production') {
+//     await generateRssFeed()
+//   }
 
-  return {
-    props: {
-      articles: (await getAllArticles())
-        .slice(0, 4)
-        .map(({ component, ...meta }) => meta),
-    },
-  }
-}
+//   return {
+//     props: {
+//       articles: (await getAllArticles())
+//         .slice(0, 4)
+//         .map(({ component, ...meta }) => meta),
+//     },
+//   }
+// }
