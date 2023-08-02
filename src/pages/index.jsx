@@ -15,7 +15,7 @@ import projectBoost from '@/images/projects/GameProjectBoost.png'
 import taiChiPractice from '@/images/projects/taichi-expert-studying-with-books.avif'
 import { formatDate } from '@/lib/formatDate'
 import { generateRssFeed } from '@/lib/generateRssFeed'
-import { getAllArticles } from '@/lib/getAllArticles'
+// import { getAllArticles } from '@/lib/getAllArticles'
 import WorkHistory from '@/components/Resume/WorkHistory'
 import Skills from '@/components/Skills/Skills'
 
@@ -79,20 +79,20 @@ function ArrowDownIcon(props) {
   )
 }
 
-function Article({ article }) {
-  return (
-    <Card as="article">
-      <Card.Title href={`/articles/${article.slug}`}>
-        {article.title}
-      </Card.Title>
-      <Card.Eyebrow as="time" dateTime={article.date} decorate>
-        {formatDate(article.date)}
-      </Card.Eyebrow>
-      <Card.Description>{article.description}</Card.Description>
-      <Card.Cta>Read article</Card.Cta>
-    </Card>
-  )
-}
+// function Article({ article }) {
+//   return (
+//     <Card as="article">
+//       <Card.Title href={`/articles/${article.slug}`}>
+//         {article.title}
+//       </Card.Title>
+//       <Card.Eyebrow as="time" dateTime={article.date} decorate>
+//         {formatDate(article.date)}
+//       </Card.Eyebrow>
+//       <Card.Description>{article.description}</Card.Description>
+//       <Card.Cta>Read article</Card.Cta>
+//     </Card>
+//   )
+// }
 
 function SocialLink({ icon: Icon, ...props }) {
   return (
