@@ -27,6 +27,7 @@ import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 
 
 
+
 const languages = [
     { name: "JavaScript", icon: faJs },
     { name: "HTML", icon: faHtml5 },
