@@ -150,7 +150,7 @@ export default function Home({ articles }) {
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
           Versatile Full Stack Developer, Technical Project Manager
           </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">I&apos;m Stuart, a Full Stack Developer with over two decades of experience in the technology sector. Specialising in development and delivery of digital projects for Web, Android, IOS, and Virtual Reality. Excels in software engineering, project management, and VR development, having worked in diverse sectors such as Startups, Government, Health, and E-commerce. Has consistently demonstrated effective project management abilities, coupled with a strong focus on full stack development, these initiatives have consistently improved user engagement and overall project success.
+          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">I&apos;m Stuart, a Full Stack Developer with over two decades of experience in the technology sector. Specialising in development and delivery of digital projects for Web, Android, IOS, and Virtual Reality. Excels in software engineering, project management, having worked in diverse sectors such as Startups, Government, Health, and E-commerce. Has consistently demonstrated effective project management abilities, coupled with a strong focus on full stack development, these initiatives have consistently improved user engagement and overall project success.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
