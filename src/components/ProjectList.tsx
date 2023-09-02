@@ -55,7 +55,7 @@ const CardProject = ({ listType = "" }) => {
                                 alt="#"
                                 width={150}
                                 height={150}
-                                className=" rounded-full"
+                                className=" rounded-full relative z-10"
                             />
                         
                         <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
