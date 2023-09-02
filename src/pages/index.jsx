@@ -114,7 +114,7 @@ export default function Home({ articles }) {
                 />
             </Head>
             
-            <ProjectList />
+            <ProjectList listType="short" />
 
 
             <Container className="mt-9">

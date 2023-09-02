@@ -18,13 +18,14 @@ function LinkIcon(props) {
 }
 
 
-const CardProject = () => {
+const CardProject = ({listType = ""}) => {
     return (
           <ul
-          className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+        //   className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-1 lg:grid-cols-3"
+        className="grid grid-cols-1 gap-x-16 gap-y-16"
         >
           {projects.map((project) => (
-            <Card as="li" key={project.name} className="">
+            <Card as="li" key={project.name} className="border-b px-6">
 
             <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
               <Image
@@ -38,18 +39,19 @@ const CardProject = () => {
             </h2>
             
               
-              <p className="pt-4 relative z-10 mt-2 text-sm text-zinc-400">{project.description}</p>
-              <ul role="list" className="divide-y divide-gray-200 text-zinc-400  ">
+              <p className="pt-4 relative z-10 mt-2 text-sm text-zinc-400">{listType === "short" ? project.ShortDesc : project.description}</p>
+
+              <ul role="list" className="relative z-10 text-zinc-400  ">
                   {project.technologies.map((item) => (
-                      <li key={item.name} className="py-4 flex items-center ">
-                      <FontAwesomeIcon icon={item.icon} className="h-6 w-6 mr-2" />
-                      <span className="ml-3">{item.name}</span>
+                      <li key={item.name} className="py-4 flex items-center float-left px-6 ">
+                      <FontAwesomeIcon icon={item.icon} className="h-6 w-6 ml-4" />
+                      <span className="ml-1">{item.name}</span>
                   </li>
                   ))}
               </ul>
-              <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
+              <p className="relative z-10 mb-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 hover:text-2xl dark:text-zinc-200">
               <LinkIcon className="h-6 w-6 flex-none" />
-              <span className="ml-2">{project.link.label}</span>
+              <span className="ml-2 text-lg">{project.link.label}</span>
             </p>                          
           </Card>
          
