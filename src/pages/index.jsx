@@ -47,18 +47,20 @@ function BriefcaseIcon(props) {
     )
 }
 
-function ArrowDownIcon(props) {
+function ProjectIcon(props) {
     return (
-        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
-            <path
-                d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            />
-        </svg>
+        <svg 
+         viewBox="0 0 576 512"
+         fill="none"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+            {...props}><path d="M0 80C0 53.5 21.5 32 48 32h96c26.5 0 48 21.5 48 48V96H384V80c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H432c-26.5 0-48-21.5-48-48V160H192v16c0 1.7-.1 3.4-.3 5L272 288h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H272c-26.5 0-48-21.5-48-48V336c0-1.7 .1-3.4 .3-5L144 224H48c-26.5 0-48-21.5-48-48V80z"  className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"/></svg>
     )
 }
+
+
 
 
 
@@ -114,7 +116,7 @@ export default function Home({ articles }) {
                 />
             </Head>
             
-            <ProjectList listType="short" />
+            
 
 
             <Container className="mt-9">
@@ -145,6 +147,15 @@ export default function Home({ articles }) {
             <Container className="mt-24 md:mt-28">
                 <Skills />
             </Container>
+            <Container className="mt-24 md:mt-28">
+            <h2 className="flex text-lg font-semibold text-zinc-900 dark:text-zinc-100 mb-12">
+                    <ProjectIcon className="h-6 w-6 flex-none" />
+                    <span className="ml-3 mb-6">Projects I&apos;m currently working on</span>
+                </h2>
+            <ProjectList listType="short" />
+            </Container>
+
+
             <Container className="mt-24 md:mt-28">
                 <h2 className="flex text-lg font-semibold text-zinc-900 dark:text-zinc-100">
                     <BriefcaseIcon className="h-6 w-6 flex-none" />

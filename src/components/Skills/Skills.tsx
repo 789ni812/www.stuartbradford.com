@@ -24,7 +24,7 @@ import { faCogs } from '@fortawesome/free-solid-svg-icons'
 import { faPerson } from '@fortawesome/free-solid-svg-icons'
 import { faBrain } from '@fortawesome/free-solid-svg-icons'
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
-
+import { EllipsisVerticalIcon } from '@heroicons/react/20/solid'
 
 
 
@@ -81,39 +81,79 @@ const skills = [
     { name: "Full Stack Development", icon: faCode }, { name: "Software Engineering", icon: faCogs }, { name: "Web Accessibility Design", icon: faPerson }, { name: "Business Intelligence", icon: faBrain }, { name: "UI/UX experience", icon: faClipboardList }, { name: "Global Web Presence Management", icon: faGlobe }, { name: "IT Infrastructure & Server Management", icon: faServer }, { name: "SEO", icon: faClipboardList }
 ]
 
+
+function classNames(...classes) {
+    return classes.filter(Boolean).join(' ')
+}
+
 const Skills = () => {
     return (
         <>
-            <div className="grid pt-16 sm:grid-cols-2 gap-4 text-zinc-800 dark:text-zinc-100 sm:text-left">
-                <h3 className="mb-3 text-1xl font-semibold">Languages:</h3>
-                <ul role="list" className="divide-y divide-gray-200">
+
+            <div className="mb-6">
+                <h3 className="mb-6 text-1xl font-semibold dark:text-zinc-100 ">Languages:</h3>
+                <ul role="list" className="mt-3 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 dark:text-zinc-100">
                     {languages.map((item) => (
-                        <li key={item.name} className="py-4 flex items-center">
-                            <FontAwesomeIcon icon={item.icon} className="h-6 w-6 mr-2" />
-                            <span className="ml-3">{item.name}</span>
+                        <li key={item.name} className="col-span-1 flex rounded-md shadow-sm">
+                            <div
+                                className='flex w-16 flex-shrink-0 items-center justify-center rounded-l-md text-sm font-medium text-white bg-pink-600'
+                            >
+                                <FontAwesomeIcon icon={item.icon} className="h-6 w-6 mr-2" />
+                            </div>
+                            <div className="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white">
+                                <div className="flex-1 truncate px-4 py-2 text-sm">
+                                    <a href="#" className="font-medium text-gray-900 hover:text-gray-600">
+                                        {item.name}
+                                    </a>
+                                </div>
+                            </div>
                         </li>
                     ))}
                 </ul>
             </div>
 
-            <div className="grid pt-16 sm:grid-cols-2 gap-4 text-zinc-800 dark:text-zinc-100 sm:text-left">
-                <h3 className="mb-3 text-1xl font-semibold">Environments:</h3>
-                <ul role="list" className="divide-y divide-gray-200">
+            <div className="mb-6">
+                <h3 className="mb-6  text-1xl font-semibold dark:text-zinc-100">Environments:</h3>
+                <ul role="list" className="mt-3 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 dark:text-zinc-100">
                     {environments.map((item) => (
-                        <li key={item.name} className="py-4 flex items-center">
-                            <FontAwesomeIcon icon={item.icon} className="h-6 w-6 mr-2" />
-                            <span className="ml-3">{item.name}</span>
+                        <li key={item.name} className="col-span-1 flex rounded-md shadow-sm">
+                            <div
+                                className='flex w-16 flex-shrink-0 items-center justify-center rounded-l-md text-sm font-medium text-white bg-pink-600'
+                            >
+                                <FontAwesomeIcon icon={item.icon} className="h-6 w-6 mr-2" />
+                            </div>
+                            <div className="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white">
+                                <div className="flex-1 truncate px-4 py-2 text-sm">
+                                    <a href="#" className="font-medium text-gray-900 hover:text-gray-600">
+                                        {item.name}
+                                    </a>
+                                </div>
+                            </div>
                         </li>
                     ))}
                 </ul>
             </div>
-            <div className="grid pt-8 sm:mb-0 sm:grid-cols-2 sm:text-left text-zinc-800 dark:text-zinc-100 mt-16">
-                <h3 className="mb-3 text-1xl font-semibold">Skills:</h3>
-                <ul role="list" className="divide-y divide-gray-200">
-                    {skills.map((item) => (
-                        <li key={item.name} className="py-4 flex items-center">
-                            <FontAwesomeIcon icon={item.icon} className="h-6 w-6 mr-2" />
-                            <span className="ml-3">{item.name}</span>
+
+
+
+
+            <div className="mb-6">
+                <h3 className="mb-6 text-1xl font-semibold dark:text-zinc-100">Skills:</h3>
+                <ul role="list" className="mt-3 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 dark:text-zinc-100">
+                    {pm.map((item) => (
+                        <li key={item.name} className="col-span-1 flex rounded-md shadow-sm">
+                            <div
+                                className='flex w-16 flex-shrink-0 items-center justify-center rounded-l-md text-sm font-medium text-white bg-pink-600'
+                            >
+                                <FontAwesomeIcon icon={item.icon} className="h-6 w-6 mr-2" />
+                            </div>
+                            <div className="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white">
+                                <div className="flex-1 truncate px-4 py-2 text-sm">
+                                    <a href="#" className="font-medium text-gray-900 hover:text-gray-600">
+                                        {item.name}
+                                    </a>
+                                </div>
+                            </div>
                         </li>
                     ))}
                 </ul>
@@ -125,6 +165,30 @@ const Skills = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         
         </>
     )
 }
