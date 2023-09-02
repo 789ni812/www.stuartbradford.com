@@ -86,21 +86,22 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
+
 const Skills = () => {
     return (
         <>
-
-            <div className="mb-6">
+            <div className="mb-6 max-w-2xl">
                 <h3 className="mb-6 text-1xl font-semibold dark:text-zinc-100 ">Languages:</h3>
-                <ul role="list" className="mt-3 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 dark:text-zinc-100">
+                <ul role="list" className="mt-3 grid grid-cols-2 gap-5 lg:grid-cols-3 dark:text-zinc-100">
+
                     {languages.map((item) => (
                         <li key={item.name} className="col-span-1 flex rounded-md shadow-sm">
                             <div
-                                className='flex w-16 flex-shrink-0 items-center justify-center rounded-l-md text-sm font-medium text-white bg-pink-600'
+                               className='flex w-16 flex-shrink-0 items-center justify-center'
                             >
                                 <FontAwesomeIcon icon={item.icon} className="h-6 w-6 mr-2" />
                             </div>
-                            <div className="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white">
+                            <div className="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 ">
                                 <div className="flex-1 truncate px-4 py-2 text-sm">
                                     <a href="#" className="font-medium text-gray-900 hover:text-gray-600">
                                         {item.name}
@@ -112,17 +113,17 @@ const Skills = () => {
                 </ul>
             </div>
 
-            <div className="mb-6">
+            <div className="mb-6 max-w-2xl">
                 <h3 className="mb-6  text-1xl font-semibold dark:text-zinc-100">Environments:</h3>
                 <ul role="list" className="mt-3 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 dark:text-zinc-100">
                     {environments.map((item) => (
                         <li key={item.name} className="col-span-1 flex rounded-md shadow-sm">
                             <div
-                                className='flex w-16 flex-shrink-0 items-center justify-center rounded-l-md text-sm font-medium text-white bg-pink-600'
+                           className='flex w-16 flex-shrink-0 items-center justify-center'
                             >
                                 <FontAwesomeIcon icon={item.icon} className="h-6 w-6 mr-2" />
                             </div>
-                            <div className="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white">
+                            <div className="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 ">
                                 <div className="flex-1 truncate px-4 py-2 text-sm">
                                     <a href="#" className="font-medium text-gray-900 hover:text-gray-600">
                                         {item.name}
@@ -137,17 +138,17 @@ const Skills = () => {
 
 
 
-            <div className="mb-6">
+            <div className="mb-6 max-w-2xl">
                 <h3 className="mb-6 text-1xl font-semibold dark:text-zinc-100">Skills:</h3>
                 <ul role="list" className="mt-3 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 dark:text-zinc-100">
                     {pm.map((item) => (
                         <li key={item.name} className="col-span-1 flex rounded-md shadow-sm">
                             <div
-                                className='flex w-16 flex-shrink-0 items-center justify-center rounded-l-md text-sm font-medium text-white bg-pink-600'
+                                className='flex w-16 flex-shrink-0 items-center justify-center'
                             >
                                 <FontAwesomeIcon icon={item.icon} className="h-6 w-6 mr-2" />
                             </div>
-                            <div className="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white">
+                            <div className="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 ">
                                 <div className="flex-1 truncate px-4 py-2 text-sm">
                                     <a href="#" className="font-medium text-gray-900 hover:text-gray-600">
                                         {item.name}

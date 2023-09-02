@@ -3,7 +3,31 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Card } from '@/components/Card'
 import { projects } from '../lib/projects'
 import Image from 'next/image';
+import { ArrowPathIcon, CloudArrowUpIcon, LockClosedIcon } from '@heroicons/react/20/solid'
 
+const features = [
+    {
+        name: 'Push to deploy',
+        description:
+            'Commodo nec sagittis tortor mauris sed. Turpis tortor quis scelerisque diam id accumsan nullam tempus. Pulvinar etiam lacus volutpat eu. Phasellus praesent ligula sit faucibus.',
+        href: '#',
+        icon: CloudArrowUpIcon,
+    },
+    {
+        name: 'SSL certificates',
+        description:
+            'Pellentesque enim a commodo malesuada turpis eleifend risus. Facilisis donec placerat sapien consequat tempor fermentum nibh.',
+        href: '#',
+        icon: LockClosedIcon,
+    },
+    {
+        name: 'Simple queues',
+        description:
+            'Pellentesque sit elit congue ante nec amet. Dolor aenean curabitur viverra suspendisse iaculis eget. Nec mollis placerat ultricies euismod ut condimentum.',
+        href: '#',
+        icon: ArrowPathIcon,
+    },
+]
 
 
 function LinkIcon(props) {
@@ -18,45 +42,47 @@ function LinkIcon(props) {
 }
 
 
-const CardProject = ({listType = ""}) => {
+const CardProject = ({ listType = "" }) => {
     return (
-          <ul
-        //   className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-1 lg:grid-cols-3"
-        className="grid grid-cols-1 gap-x-16 gap-y-16"
-        >
-          {projects.map((project) => (
-            <Card as="li" key={project.name} className="border-b px-6">
-
-            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image
-                src={project.imageLogo}
-                alt="screenshot of project.name"
-                className="h-8 w-8"
-              />
-            </div>
-            <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-              <Card.Link href={project.link.href} target="_blank">{project.name}</Card.Link>
-            </h2>
+        <>
             
-              
-              <p className="pt-4 relative z-10 mt-2 text-sm text-zinc-400">{listType === "short" ? project.ShortDesc : project.description}</p>
+                {projects.map((project) => (
+                    <Card key={project.name} className="gap-2 relative z-10  items-center justify-center  bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
 
-              <ul role="list" className="relative z-10 text-zinc-400  ">
-                  {project.technologies.map((item) => (
-                      <li key={item.name} className="py-4 flex items-center float-left px-6 ">
-                      <FontAwesomeIcon icon={item.icon} className="h-6 w-6 ml-4" />
-                      <span className="ml-1">{item.name}</span>
-                  </li>
-                  ))}
-              </ul>
-              <p className="relative z-10 mb-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 hover:text-2xl dark:text-zinc-200">
-              <LinkIcon className="h-6 w-6 flex-none" />
-              <span className="ml-2 text-lg">{project.link.label}</span>
-            </p>                          
-          </Card>
-         
-          ))}
-        </ul>
+                        
+                            <Image
+                                src={project.imageLogo}
+                                alt="#"
+                                width={150}
+                                height={150}
+                                className=" rounded-full"
+                            />
+                        
+                        <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                            <Card.Link href={project.link.href} target="_blank">{project.name}</Card.Link>
+                        </h2>
+
+
+                        <p className="mt-2 text-md text-zinc-400">{listType === "short" ? project.ShortDesc : project.description}</p>
+
+                        <ul role="list" className=" text-zinc-400 flex flex-wrap items-center justify-center gap-2">
+                            {project.technologies.map((item) => (
+                                <li key={item.name} className="">
+                                    <FontAwesomeIcon icon={item.icon} className="h-6 w-6 ml-4" />
+                                    <span className="ml-1">{item.name}</span>
+                                </li>
+                            ))}
+                        </ul>
+                        <p className="relative z-10 mb-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 hover:text-2xl dark:text-zinc-200">
+                            <LinkIcon className="h-6 w-6 flex-none" />
+                            <span className="ml-2 text-lg">{project.link.label}</span>
+                        </p>
+                    </Card>
+                
+
+                ))}
+            
+        </>
     );
 };
 
