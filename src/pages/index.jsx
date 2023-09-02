@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
-import { Card } from '@/components/Card'
+
 import { Container } from '@/components/Container'
 import {
     GitHubIcon,
@@ -18,19 +18,9 @@ import { formatDate } from '@/lib/formatDate'
 // import { getAllArticles } from '@/lib/getAllArticles'
 import WorkHistory from '@/components/Resume/WorkHistory'
 import Skills from '@/components/Skills/Skills'
-import { projects } from '../lib/projects'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-function LinkIcon(props) {
-    return (
-        <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-            <path
-                d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z"
-                fill="currentColor"
-            />
-        </svg>
-    )
-}
+
+import ProjectList from '@/components/ProjectList'
 
 
 
@@ -123,59 +113,8 @@ export default function Home({ articles }) {
                     content="I'm Stuart, Proficient and accomplished Full Stack Developer with over two decades of experience in the technology sector. Specialises in development and delivery of digital projects for Web, Android, IOS, and Virtual Reality. Excels in software engineering, project management, and VR development, having worked in diverse sectors such as Startups, Government, Health, and E-commerce. Has established a strong track record of migrating platforms in-house, enhancing operational efficiency, and improving user engagement."
                 />
             </Head>
-            <Container className="mt-24 md:mt-28">
-                <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-                    <div className="flex flex-col gap-16 ">
-                        {projects.map((project) => (
-                            <div key={project.name}>
-                                <div className="p-4">
-                                    <div className="w-full">
-                                        {/* <div className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" title="Mountain">
-                                            <Image
-                                                src={project.imageLogo}
-                                                alt=""
-                                                className="h-48 w-48"
-                                                unoptimized
-                                            />
-                                        </div> */}
-                                        <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-                                            <div className="mb-8">
-                                                <div className="flex float-left rounded-lg pb-4 overflow-hidden mr-2" title="Mountain">
-                                                    <Image
-                                                        src={project.imageLogo}
-                                                        alt=""
-                                                        className="h-auto w-28"
-                                                        unoptimized
-                                                    />
-                                                </div>
-
-                                                <div className="text-gray-900 font-bold text-xl mb-2">{project.name}</div>
-                                                <p className="text-gray-700 text-base">{project.ShortDesc}</p>
-                                            </div>
-                                            <div className="flex items-center">
-                                                <div className="text-sm">
-                                                    <ul role="list" className="text-zinc-400">
-                                                        {project.technologies.map((item) => (
-                                                            <li key={item.name} className="flex items-center float-left ml-4">
-                                                                <FontAwesomeIcon icon={item.icon} className="h-2 w-2 mr-2" />
-                                                                <span className=" text-xs">{item.name}</span>
-                                                            </li>
-                                                        ))}
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
-                                            <LinkIcon className="h-6 w-6 flex-none" />
-                                            <span className="ml-2">{project.link.label}</span>
-                                        </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </Container>
+            
+            <ProjectList />
 
 
             <Container className="mt-9">

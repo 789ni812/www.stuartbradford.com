@@ -20,9 +20,9 @@ import ProtoScaffoldingThmb from '@/images/projects/protoScaffolding.png'
 export const projects = [
     {
         name: 'Realtime simulation dashboard',
-        ShortDesc: 'React realtime simulation and chart dashboard',
+        ShortDesc: 'I wanted to create a simple simulation so I could show off a live dashboard in some way',
         description:
-          "Simulation creates basic realtime population data represented as charts and statistics related to population growth and age distribution. Built using TypeScript and React components using the useState, useEffect, useCallback, and useMemo hooks, which allow the components to manage state and respond to changes in the data.",
+          "I wanted to create a simple simulation so I could show off a live dashboard in some way, this example creates basic realtime population data represented as charts and statistics related to population growth and age distribution. Built using TypeScript and React components using the useState, useEffect, useCallback, and useMemo hooks, which allow the components to manage state and respond to changes in the data.",
         technologies: [
             { name: "NodeJS", icon: faNode },
             { name: "React", icon: faReact },
