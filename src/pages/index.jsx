@@ -124,18 +124,32 @@ export default function Home({ articles }) {
                     <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
                         Versatile Full Stack Developer, Technical Project Manager
                     </h1>
-                    <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">I&apos;m Stuart, a Full Stack Developer with over two decades of experience in the technology sector. Specialising in development and delivery of digital projects for Web, mobile, and Virtual Reality. </p>
-                    <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                        I&apos;ve worked in diverse sectors such as Startups, Government, Health, and E-commerce.
+                    <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">I&apos;m Stuart, a Full Stack Developer with over two decades of experience in the technology sector. Specialising in development and delivery of digital projects for Web, mobile. </p>
+
+
+                    <p className="text-base text-zinc-600 dark:text-zinc-400">
+                        Worked in diverse sectors such as Startups, Government, Health, and E-commerce.
                     </p>
+                    <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+I&apos;ve seen a lot over the years, but there&apos;s always more to learn. Alongside my day job, I&apos;m currently studying VR & AR development.</p>
+
+                    
+
+
+
+
+
                     <div className="mt-6 flex gap-6">
+                 
                         <SocialLink
                             href="https://github.com/789ni812"
                             aria-label="Follow on GitHub"
                             icon={GitHubIcon}
+                            target="_blank"
                         />
                         <SocialLink
                             href="https://www.linkedin.com/in/stuart-bradford/"
+                            target="_blank"
                             aria-label="Follow on LinkedIn"
                             icon={LinkedInIcon}
                         />
