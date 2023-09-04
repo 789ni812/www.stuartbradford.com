@@ -47,36 +47,36 @@ const CardProject = ({ listType = "" }) => {
         <>
             
                 {projects.map((project) => (
-                    <Card key={project.name} className="gap-2 relative z-10  items-center justify-center  bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                    <Card key={project.name} className="items-center justify-center  bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 p-16">
+                    
 
-                        
-                            <Image
-                                src={project.imageLogo}
+                        <Image
+                        src={project.imageLogo}
                                 alt="#"
                                 width={150}
                                 height={150}
-                                className=" rounded-full relative z-10"
+                                className=" rounded-full "
                             />
-                        
-                        <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                        <h2 className="mb-6 text-base font-semibold  dark:text-zinc-100 text-teal-500">
                             <Card.Link href={project.link.href} target="_blank">{project.name}</Card.Link>
                         </h2>
 
 
-                        <p className="mt-2 text-md text-zinc-400">{listType === "short" ? project.ShortDesc : project.description}</p>
+                        <p className="mb-6 flex-auto bg-red-500 text-md text-zinc-400">{listType === "short" ? project.ShortDesc : project.description}</p>
 
-                        <ul role="list" className=" text-zinc-400 flex flex-wrap items-center justify-center gap-2">
+                        <ul role="list" className=" text-zinc-400 flex  items-center justify-center gap-2 text-sm ">
                             {project.technologies.map((item) => (
-                                <li key={item.name} className="">
+                                <li key={item.name} className="mb-6 flex-wrap">
                                     <FontAwesomeIcon icon={item.icon} className="h-6 w-6 ml-4" />
                                     <span className="ml-1">{item.name}</span>
                                 </li>
                             ))}
                         </ul>
-                        <p className="relative z-10 mb-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 hover:text-2xl dark:text-zinc-200">
-                            <LinkIcon className="h-6 w-6 flex-none" />
+                        <p className="relative z-10 mb-6 flex text-sm   transition  dark:text-zinc-200">
+                            <LinkIcon className="h-6 w-6" />
                             <span className="ml-2 text-lg">{project.link.label}</span>
                         </p>
+                        
                     </Card>
                 
 

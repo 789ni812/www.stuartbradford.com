@@ -91,7 +91,7 @@ const Skills = () => {
     return (
         <>
             <div className="mb-6 max-w-2xl">
-                <h3 className="mb-6 text-1xl font-semibold dark:text-zinc-100 ">Languages:</h3>
+                <h3 className="mb-6 text-1xl text-teal-700 font-semibold dark:text-zinc-100 ">Languages:</h3>
                 <ul role="list" className="mt-3 dark:text-zinc-100">
 
                     {languages.map((item) => (
@@ -99,11 +99,11 @@ const Skills = () => {
                             <div
                                className='flex w-16 flex-shrink-0 items-center justify-center'
                             >
-                                <FontAwesomeIcon icon={item.icon} className="h-6 w-6 mr-2" />
+                                <FontAwesomeIcon icon={item.icon} className="h-6 w-6 mr-2 text-zinc-400" />
                             </div>
                             <div className="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 ">
                                 <div className="flex-1 truncate px-4 py-2 text-sm">
-                                    <a href="#" className="font-medium text-gray-900 hover:text-gray-600">
+                                    <a href="#" className="font-medium text-zinc-400 hover:text-gray-600">
                                         {item.name}
                                     </a>
                                 </div>
@@ -114,18 +114,18 @@ const Skills = () => {
             </div>
 
             <div className="mb-6 max-w-2xl">
-                <h3 className="mb-6  text-1xl font-semibold dark:text-zinc-100">Environments:</h3>
+                <h3 className="mb-6  text-1xl font-semibold dark:text-zinc-100 text-teal-700">Environments:</h3>
                 <ul role="list" className="mt-3  dark:text-zinc-100">
                     {environments.map((item) => (
                         <li key={item.name} className="col-span-1 flex rounded-md shadow-sm">
                             <div
                            className='flex w-16 flex-shrink-0 items-center justify-center'
                             >
-                                <FontAwesomeIcon icon={item.icon} className="h-6 w-6 mr-2" />
+                                <FontAwesomeIcon icon={item.icon} className="h-6 w-6 mr-2 text-zinc-400" />
                             </div>
                             <div className="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 ">
                                 <div className="flex-1 truncate px-4 py-2 text-sm">
-                                    <a href="#" className="font-medium text-gray-900 hover:text-gray-600">
+                                    <a href="#" className="font-medium text-zinc-400 hover:text-gray-600">
                                         {item.name}
                                     </a>
                                 </div>
@@ -139,18 +139,18 @@ const Skills = () => {
 
 
             <div className="mb-6 max-w-2xl">
-                <h3 className="mb-6 text-1xl font-semibold dark:text-zinc-100">Skills:</h3>
+                <h3 className="mb-6 text-1xl font-semibold dark:text-zinc-100 text-teal-700">Skills:</h3>
                 <ul role="list" className="mt-3 dark:text-zinc-100">
                     {pm.map((item) => (
                         <li key={item.name} className="col-span-1 flex rounded-md shadow-sm">
                             <div
                                 className='flex w-16 flex-shrink-0 items-center justify-center'
                             >
-                                <FontAwesomeIcon icon={item.icon} className="h-6 w-6 mr-2" />
+                                <FontAwesomeIcon icon={item.icon} className="h-6 w-6 mr-2 text-zinc-400" />
                             </div>
                             <div className="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 ">
                                 <div className="flex-1 truncate px-4 py-2 text-sm">
-                                    <a href="#" className="font-medium text-gray-900 hover:text-gray-600">
+                                    <a href="#" className="font-medium text-zinc-400 hover:text-gray-600">
                                         {item.name}
                                     </a>
                                 </div>
