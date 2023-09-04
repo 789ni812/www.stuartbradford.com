@@ -156,14 +156,19 @@ I&apos;ve seen a lot over the years, but there&apos;s always more to learn. Alon
             </Container>
             <Photos />
             <Container className="mt-24 md:mt-28">
+            <div className="grid grid-cols-1 gap-5  md:grid-cols-2 lg:grid-cols-3">
                 <Skills />
+                </div>
             </Container>
             <Container className="mt-24 md:mt-28">
             <h2 className="flex text-lg font-semibold text-zinc-900 dark:text-zinc-100 mb-12">
                     <ProjectIcon className="h-6 w-6 flex-none" />
                     <span className="ml-3 mb-6">Projects I&apos;m currently working on</span>
                 </h2>
+
+                <div className="grid grid-cols-1 gap-5  md:grid-cols-2 xl:grid-cols-3">
             <ProjectList listType="short" />
+            </div>
             </Container>
 
 

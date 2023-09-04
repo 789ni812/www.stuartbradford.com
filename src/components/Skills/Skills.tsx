@@ -92,7 +92,7 @@ const Skills = () => {
         <>
             <div className="mb-6 max-w-2xl">
                 <h3 className="mb-6 text-1xl font-semibold dark:text-zinc-100 ">Languages:</h3>
-                <ul role="list" className="mt-3 grid grid-cols-2 gap-5 lg:grid-cols-3 dark:text-zinc-100">
+                <ul role="list" className="mt-3 dark:text-zinc-100">
 
                     {languages.map((item) => (
                         <li key={item.name} className="col-span-1 flex rounded-md shadow-sm">
@@ -115,7 +115,7 @@ const Skills = () => {
 
             <div className="mb-6 max-w-2xl">
                 <h3 className="mb-6  text-1xl font-semibold dark:text-zinc-100">Environments:</h3>
-                <ul role="list" className="mt-3 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 dark:text-zinc-100">
+                <ul role="list" className="mt-3  dark:text-zinc-100">
                     {environments.map((item) => (
                         <li key={item.name} className="col-span-1 flex rounded-md shadow-sm">
                             <div
@@ -140,7 +140,7 @@ const Skills = () => {
 
             <div className="mb-6 max-w-2xl">
                 <h3 className="mb-6 text-1xl font-semibold dark:text-zinc-100">Skills:</h3>
-                <ul role="list" className="mt-3 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 dark:text-zinc-100">
+                <ul role="list" className="mt-3 dark:text-zinc-100">
                     {pm.map((item) => (
                         <li key={item.name} className="col-span-1 flex rounded-md shadow-sm">
                             <div
