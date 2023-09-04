@@ -55,7 +55,7 @@ const CardProject = ({ listType = "" }) => {
                                 alt="#"
                                 width={150}
                                 height={150}
-                                className=" rounded-full "
+                                className=" rounded-full relative z-10"
                             />
                         <h2 className="mb-6 text-base font-semibold  dark:text-zinc-100 text-teal-500">
                             <Card.Link href={project.link.href} target="_blank">{project.name}</Card.Link>
@@ -64,9 +64,9 @@ const CardProject = ({ listType = "" }) => {
 
                         <p className="mb-6 flex-auto bg-red-500 text-md text-zinc-400">{listType === "short" ? project.ShortDesc : project.description}</p>
 
-                        <ul role="list" className=" text-zinc-400 flex  items-center justify-center gap-2 text-sm ">
+                        <ul role="list" className=" text-zinc-400 md:flex sm:flex-wrap  items-center justify-center gap-2 text-sm ">
                             {project.technologies.map((item) => (
-                                <li key={item.name} className="mb-6 flex-wrap">
+                                <li key={item.name} className="mb-6">
                                     <FontAwesomeIcon icon={item.icon} className="h-6 w-6 ml-4" />
                                     <span className="ml-1">{item.name}</span>
                                 </li>
