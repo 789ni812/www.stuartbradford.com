@@ -118,7 +118,7 @@ export default function Home({ articles }) {
 
             <Container className="mt-9">
                 <div className="max-w-2xl">
-                    <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+                    <h1 className="text-4xl font-bold tracking-tight text-teal-700 dark:text-zinc-100 sm:text-5xl">
                         Versatile Full Stack Developer, Technical Project Manager
                     </h1>
                     <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">I&apos;m Stuart, a Full Stack Developer with over two decades of experience in the technology sector. Specialising in development and delivery of digital projects for Web, mobile. </p>
@@ -156,19 +156,24 @@ I&apos;ve seen a lot over the years, but there&apos;s always more to learn. Alon
             </Container>
             <Photos />
             <Container className="mt-24 md:mt-28">
+            <div className="grid grid-cols-1 gap-5  md:grid-cols-2 lg:grid-cols-3">
                 <Skills />
+                </div>
             </Container>
             <Container className="mt-24 md:mt-28">
-            <h2 className="flex text-lg font-semibold text-zinc-900 dark:text-zinc-100 mb-12">
+            <h2 className="flex text-lg font-semibold dark:text-zinc-100 mb-12 text-teal-700">
                     <ProjectIcon className="h-6 w-6 flex-none" />
                     <span className="ml-3 mb-6">Projects I&apos;m currently working on</span>
                 </h2>
+
+                <div className="grid grid-cols-1 gap-5 lg:gap-32 p-8  md:grid-cols-2 xl:grid-cols-3">
             <ProjectList listType="short" />
+            </div>
             </Container>
 
 
             <Container className="mt-24 md:mt-28">
-                <h2 className="flex text-lg font-semibold text-zinc-900 dark:text-zinc-100">
+                <h2 className="flex text-lg font-semibold text-teal-700 dark:text-zinc-100">
                     <BriefcaseIcon className="h-6 w-6 flex-none" />
                     <span className="ml-3 mb-6">Work</span>
                 </h2>
