@@ -4,7 +4,6 @@ import Unity, { UnityContext } from "react-unity-webgl";
 const unityContext = new UnityContext({
     loaderUrl: "./games/ProjectBoost/Build/MonoBleedingEdge.loader.js",
     dataUrl: "./games/ProjectBoost/Build/MonoBleedingEdge.data.gz",
-    // frameworkUrl: "build/myunityapp.framework.js",
     frameworkUrl: "./games/ProjectBoost/Build/MonoBleedingEdge.framework.js.gz",
     codeUrl: "./games/ProjectBoost/Build/MonoBleedingEdge.wasm.gz",
 });
