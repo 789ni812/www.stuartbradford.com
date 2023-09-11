@@ -55,6 +55,9 @@ dependencies:
   nextjs:
     specifier: ^0.0.3
     version: 0.0.3
+  nextjs-unity-webgl:
+    specifier: ^8.6.0
+    version: 8.6.0(react@18.2.0)
   postcss-focus-visible:
     specifier: ^6.0.4
     version: 6.0.4(postcss@8.4.29)
@@ -3104,6 +3107,14 @@ packages:
     transitivePeerDependencies:
       - '@babel/core'
       - babel-plugin-macros
+    dev: false
+
+  /nextjs-unity-webgl@8.6.0(react@18.2.0):
+    resolution: {integrity: sha512-xxgZQ6qBs/g9k2kSlOh49UKR4Zpvnunz2lFUEUivgwWblK2N6V3wYlSWHypHegxnr1lJbzYWDahm0uvPDAv0Aw==}
+    peerDependencies:
+      react: '>=16.8.0'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /nextjs@0.0.3:

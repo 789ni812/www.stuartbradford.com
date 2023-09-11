@@ -56,7 +56,7 @@ export const projects = [
         description:
             "To help in learning and better understand how to build games and applications in Virtual Reality I first need to get an understanding of 3D game development. So I recently completed a Unity course on just that. As part of this training course I built a game about flying a rocket through a series of obstacles, using Unity and C#. I've added a couple of tweaks to it and exported it to the web using WebGL. it's very basic, but really helped me understand the basics of 3D game development and has helped me greatly in my VR development practice.",
         technologies: [{ name: "Unity", icon: faUnity },{ name: "C#", icon: faFileLines }],
-        link: { href: '@/public/games/ProjectBoost/index.html', label: 'Project Boost' },
+        link: { href: './ProjectBoostLoader', label: 'Project Boost' },
         imageLogo: projectBoostImage
       },
       //     {
