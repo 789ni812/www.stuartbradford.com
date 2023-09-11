@@ -55,6 +55,9 @@ dependencies:
   nextjs:
     specifier: ^0.0.3
     version: 0.0.3
+  nextjs-unity-webgl:
+    specifier: ^8.6.0
+    version: 8.6.0(react@18.2.0)
   postcss-focus-visible:
     specifier: ^6.0.4
     version: 6.0.4(postcss@8.4.29)
@@ -64,6 +67,9 @@ dependencies:
   react-dom:
     specifier: 18.2.0
     version: 18.2.0(react@18.2.0)
+  react-unity-webgl:
+    specifier: ^9.4.3
+    version: 9.4.3(react@18.2.0)
   react-vertical-timeline-component:
     specifier: ^3.6.0
     version: 3.6.0(react@18.2.0)
@@ -3106,6 +3112,14 @@ packages:
       - babel-plugin-macros
     dev: false
 
+  /nextjs-unity-webgl@8.6.0(react@18.2.0):
+    resolution: {integrity: sha512-xxgZQ6qBs/g9k2kSlOh49UKR4Zpvnunz2lFUEUivgwWblK2N6V3wYlSWHypHegxnr1lJbzYWDahm0uvPDAv0Aw==}
+    peerDependencies:
+      react: '>=16.8.0'
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /nextjs@0.0.3:
     resolution: {integrity: sha512-mYbDUo4/sRAZ8TqK63PCpYnFiLg7BICG/ot9+guOrUKd4/Fo71ZmEQ41IZbH6nqbQvG7SXTBuofJXAIWfNho0w==}
     engines: {node: '>=0.8.21'}
@@ -3572,6 +3586,14 @@ packages:
 
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+
+  /react-unity-webgl@9.4.3(react@18.2.0):
+    resolution: {integrity: sha512-P/NhKil8EZRtT3q87DC0EgxdNd3c5wa34DMWr5128r2bZojgVIJJu+b20RtGaJpW4lxg6SB2PNN4+R2QujKlDw==}
+    peerDependencies:
+      react: '>=16.8.0'
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /react-vertical-timeline-component@3.6.0(react@18.2.0):
     resolution: {integrity: sha512-l9zulqjIGlRuaQeplGzV4r/tG2RYBpYt84Il8w4IxnJze2cDIGI04MKo3F7f1sHT0Sih1ohEFts8UV23AJS15Q==}
