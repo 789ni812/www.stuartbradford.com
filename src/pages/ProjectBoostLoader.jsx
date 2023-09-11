@@ -1,41 +1,6 @@
 
-import React, { useState } from "react";
+
 import { Unity, useUnityContext } from "react-unity-webgl";
-import { motion } from "framer-motion";
-import projectBoostImage from '@/images/projects/GameProjectBoost.png'
-import Image from "next/image";
-
-const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
-const visibleMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 30px)`;
-const LoadingUnity = () => {
-    const [isLoaded, setIsLoaded] = useState(false);
-    const [isInView, setIsInView] = useState(false);
-    return (
-        <div className="text-zinc-600 dark:text-zinc-400 text-3xl mx-auto justify-center my-16 flex">
-            <div className="my-auto mx-16 ">Loading</div>
-            <motion.div
-                initial={false}
-                animate={
-                    isLoaded && isInView
-                        ? { WebkitMaskImage: visibleMask, maskImage: visibleMask }
-                        : { WebkitMaskImage: hiddenMask, maskImage: hiddenMask }
-                }
-                transition={{ duration: 1, delay: 1 }}
-                viewport={{ once: true }}
-                onViewportEnter={() => setIsInView(true)}
-            >
-                <div className="mt-8">
-                    <Image src={projectBoostImage} alt="" onLoad={() => setIsLoaded(true)}
-                        width={250}
-                        height={250}
-                    />
-                </div>
-            </motion.div>
-
-        </div>
-    )
-}
-
 
 const UnityGame = () => {
     const { unityProvider } = useUnityContext({
@@ -43,8 +8,9 @@ const UnityGame = () => {
         dataUrl: "/games/ProjectBoost/Build/MonoBleedingEdge.data",
         frameworkUrl: "/games/ProjectBoost/Build/MonoBleedingEdge.framework.js",
         codeUrl: "/games/ProjectBoost/Build/MonoBleedingEdge.wasm",
-
     });
+
+
 
 
     return (
@@ -52,8 +18,18 @@ const UnityGame = () => {
             <h1 className="text-4xl font-bold tracking-tight text-teal-700 dark:text-zinc-100 sm:text-5xl mb-2">
                 Project Boost
             </h1>
-            {unityProvider ? <Unity unityProvider={unityProvider} className="w-[960px] h-[500px] " /> : <LoadingUnity />}
 
+
+
+            <div class="w-[960px] h-[500px] flex justify-center items-center">
+                <div class="  mx-auto relative z-0">
+                    <p class="text-3xl text-teal-700 dark:text-zinc-100">Loading...</p>
+
+                    <div class="absolute inset-0 flex justify-center items-center z-10">
+                        <Unity unityProvider={unityProvider} className="w-[960px] h-[500px]" />
+                    </div>
+                </div>
+            </div>
 
 
 
