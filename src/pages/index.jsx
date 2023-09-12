@@ -46,14 +46,14 @@ function BriefcaseIcon(props) {
 
 function ProjectIcon(props) {
     return (
-        <svg 
-         viewBox="0 0 576 512"
-         fill="none"
+        <svg
+            viewBox="0 0 576 512"
+            fill="none"
             strokeWidth="1.5"
             strokeLinecap="round"
             strokeLinejoin="round"
             aria-hidden="true"
-            {...props}><path d="M0 80C0 53.5 21.5 32 48 32h96c26.5 0 48 21.5 48 48V96H384V80c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H432c-26.5 0-48-21.5-48-48V160H192v16c0 1.7-.1 3.4-.3 5L272 288h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H272c-26.5 0-48-21.5-48-48V336c0-1.7 .1-3.4 .3-5L144 224H48c-26.5 0-48-21.5-48-48V80z"  className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"/></svg>
+            {...props}><path d="M0 80C0 53.5 21.5 32 48 32h96c26.5 0 48 21.5 48 48V96H384V80c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H432c-26.5 0-48-21.5-48-48V160H192v16c0 1.7-.1 3.4-.3 5L272 288h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H272c-26.5 0-48-21.5-48-48V336c0-1.7 .1-3.4 .3-5L144 224H48c-26.5 0-48-21.5-48-48V80z" className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500" /></svg>
     )
 }
 
@@ -109,11 +109,11 @@ export default function Home({ articles }) {
                 </title>
                 <meta
                     name="description"
-                    content="I'm Stuart, Proficient and accomplished Full Stack Developer with over two decades of experience in the technology sector. Specialises in development and delivery of digital projects for Web, Android, IOS, and Virtual Reality. Excels in software engineering, project management, and VR development, having worked in diverse sectors such as Startups, Government, Health, and E-commerce. Has established a strong track record of migrating platforms in-house, enhancing operational efficiency, and improving user engagement."
+                    content="I'm Stuart, a Full Stack Developer & Technical Project Manager with over two decades of experience in the technology sector. Specialising in development and delivery of digital projects for Web, mobile and just recently VR Development."
                 />
             </Head>
-            
-            
+
+
 
 
             <Container className="mt-9">
@@ -121,23 +121,23 @@ export default function Home({ articles }) {
                     <h1 className="text-4xl font-bold tracking-tight text-teal-700 dark:text-zinc-100 sm:text-5xl">
                         Versatile Full Stack Developer, Technical Project Manager
                     </h1>
-                    <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">I&apos;m Stuart, a Full Stack Developer with over two decades of experience in the technology sector. Specialising in development and delivery of digital projects for Web, mobile. </p>
+                    <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">I&apos;m Stuart, a Full Stack Developer with over two decades of experience in the technology sector. Specialising in development and delivery of digital projects for Web, mobile and just recently VR Development. </p>
 
 
                     <p className="text-base text-zinc-600 dark:text-zinc-400">
                         Worked in diverse sectors such as Startups, Government, Health, and E-commerce.
                     </p>
                     <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-I&apos;ve seen a lot over the years, but there&apos;s always more to learn. Alongside my day job, I&apos;m currently studying VR & AR development.</p>
+                        I&apos;ve seen a lot over the years, but there&apos;s always more to learn. Alongside my day job, I&apos;m currently studying VR & AR development.</p>
 
-                    
+
 
 
 
 
 
                     <div className="mt-6 flex gap-6">
-                 
+
                         <SocialLink
                             href="https://github.com/789ni812"
                             aria-label="Follow on GitHub"
@@ -156,19 +156,19 @@ I&apos;ve seen a lot over the years, but there&apos;s always more to learn. Alon
             </Container>
             <Photos />
             <Container className="mt-24 md:mt-28">
-            <div className="grid grid-cols-1 gap-5  md:grid-cols-2 lg:grid-cols-3">
-                <Skills />
+                <div className="grid grid-cols-1 gap-5  md:grid-cols-2 lg:grid-cols-3">
+                    <Skills />
                 </div>
             </Container>
             <Container className="mt-24 md:mt-28">
-            <h2 className="flex text-lg font-semibold dark:text-zinc-100 mb-12 text-teal-700">
+                <h2 className="flex text-lg font-semibold dark:text-zinc-100 mb-12 text-teal-700">
                     <ProjectIcon className="h-6 w-6 flex-none" />
                     <span className="ml-3 mb-6">Projects I&apos;m currently working on</span>
                 </h2>
 
                 <div className="grid grid-cols-1 gap-5 lg:gap-32 p-8  md:grid-cols-2 xl:grid-cols-3">
-            <ProjectList listType="short" />
-            </div>
+                    <ProjectList listType="short" />
+                </div>
             </Container>
 
 
