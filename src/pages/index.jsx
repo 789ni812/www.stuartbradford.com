@@ -166,7 +166,8 @@ export default function Home({ articles }) {
                     <span className="ml-3 mb-6">Projects I&apos;m currently working on</span>
                 </h2>
 
-                <div className="grid grid-cols-1 gap-5 lg:gap-32 p-8  md:grid-cols-2 xl:grid-cols-3">
+                {/* <div className="grid grid-cols-1 gap-5 lg:gap-32 p-8  md:grid-cols-2 xl:grid-cols-3"> */}
+                <div className="grid grid-cols-1 gap-5">
                     <ProjectList listType="short" />
                 </div>
             </Container>
