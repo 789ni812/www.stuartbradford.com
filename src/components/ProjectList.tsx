@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Card } from '@/components/Card'
 import { projects } from '../lib/projects'
 import Image from 'next/image';
+import Link from 'next/link';
 import { ArrowPathIcon, CloudArrowUpIcon, LockClosedIcon } from '@heroicons/react/20/solid'
 
 
@@ -21,10 +22,54 @@ function LinkIcon(props) {
 
 
 const CardProject = ({ listType = "" }) => {
+    // return (
+    //     <>
+    //         {projects.map((project) => (
+                
+    //             card(project, listType)
+                
+    //         ))}
+
+    //     </>
+    // );
     return (
         <>
+
             {projects.map((project) => (
-                card(project, listType)
+                <Card key={project.name} className="gap-2 relative z-10  items-center justify-center  bg-gray-500 shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+
+
+                    
+
+                     <Image
+                            src={project.imageLogo}
+                            alt="#"
+
+                            className='w-full h-auto max-w-2xl relative z-10'
+                        />
+
+                    <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100 ">
+                        <Card.Link href={project.link.href} target="_blank">{project.name}</Card.Link>
+                    </h2>
+
+
+                    <p className="mt-2 text-md  text-zinc-800 dark:text-zinc-300 relative z-10">{listType === "short" ? project.ShortDesc : project.description}</p>
+
+                    <ul role="list" className="mt-6 flex flex-wrap gap-6 px-4 items-center justify-center text-sm text-zinc-400 relative z-10">
+                            {project.technologies.map((item) => (
+                                <li key={item.name} className="flex flex-col items-center mb-6">
+                                    <FontAwesomeIcon icon={item.icon} className="h-6 w-6" />
+                                    <span className="ml-1 mt-2">{item.name}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    <p className="relative z-10 mb-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 hover:text-2xl dark:text-zinc-200">
+                        <LinkIcon className="h-6 w-6 flex-none" />
+                        <span className="ml-2 text-lg">{project.link.label}</span>
+                    </p>
+                </Card>
+
+
             ))}
 
         </>
@@ -34,37 +79,53 @@ const CardProject = ({ listType = "" }) => {
 export default CardProject;
 
 
+
+
+
 function card(project, listType: string): React.JSX.Element {
     return (
         <>
-        <div className="container mx-auto p-10 md:p-20 transform duration-500">
-        <div className="flex flex-wrap shadow-lg mx-auto max-w-xl dark:bg-gray-400">
-            <Image
-            src={project.imageLogo}
-            alt="#"
-            
-            className='w-full h-auto max-w-3xl'
-        />
-        
-            <div className="p-10 my-auto">
-                <h1 className="text-2xl font-semibold text-gray-800 dark:text-zinc-100">{project.name}</h1>
-                <p className="text-base text-gray-400 mt-2 mb-6 flex-auto p-24 ">{listType === "short" ? project.ShortDesc : project.description}</p>
-            </div>
-            <ul role="list" className="flex flex-wrap gap-6 px-4 items-center justify-center text-sm text-zinc-400">
-  {project.technologies.map((item) => (
-    <li key={item.name} className="flex flex-col items-center mb-6">
-      <FontAwesomeIcon icon={item.icon} className="h-6 w-6" />
-      <span className="ml-1 mt-2">{item.name}</span>
-    </li>
-  ))}
-</ul>
+
+            {projects.map((project) => (
+                <Card key={project.name} className="gap-2 relative z-10  items-center justify-center  bg-gray-500 shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
 
 
-            <h2 className="mb-6 text-base font-semibold  dark:text-zinc-100 text-teal-500 ">
-            {project.name}
-        </h2>
-        </div>
-    </div>
-    </>
-    )
+                    
+
+                     <Image
+                            src={project.imageLogo}
+                            alt="#"
+
+                            className='w-full h-auto max-w-2xl relative z-10'
+                        />
+
+                    <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100 ">
+                        <Card.Link href={project.link.href} target="_blank">{project.name}</Card.Link>
+                    </h2>
+
+
+                    <p className="mt-2 text-md  text-zinc-800 dark:text-zinc-300 relative z-10">{listType === "short" ? project.ShortDesc : project.description}</p>
+
+                    <ul role="list" className="mt-6 flex flex-wrap gap-6 px-4 items-center justify-center text-sm text-zinc-400 relative z-10">
+                            {project.technologies.map((item) => (
+                                <li key={item.name} className="flex flex-col items-center mb-6">
+                                    <FontAwesomeIcon icon={item.icon} className="h-6 w-6" />
+                                    <span className="ml-1 mt-2">{item.name}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    <p className="relative z-10 mb-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 hover:text-2xl dark:text-zinc-200">
+                        <LinkIcon className="h-6 w-6 flex-none" />
+                        <span className="ml-2 text-lg">{project.link.label}</span>
+                    </p>
+                </Card>
+
+
+            ))}
+
+        </>
+    );
 }
+
+
+
