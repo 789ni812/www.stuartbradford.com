@@ -234,7 +234,7 @@ const WorkHistory = () => {
                         icon={experience.icon}
                     >
                         {/* <div className="space-y-4"> */}
-                        <div className="space-y-4 ">
+                        {/* <div className="space-y-4 ">
                             <div className="flex items-center space-x-4 prose">
                                 <div>
                                     <h2 className="text-zinc-200 dark:text-zinc-200">{experience.jobTitle}</h2>
@@ -273,6 +273,53 @@ const WorkHistory = () => {
 
                                 </>
                             )}
+                        </div> */}
+                        <div className="card lg:card-side bg-base-100 shadow-xl">
+                          <div className="card-body">
+                                <h2 className="card-title">{experience.jobTitle}</h2>
+                                <h3 className="text-zinc-200 dark:text-zinc-200">{experience.company}</h3>
+                        
+
+                            {experience.description.map((item, index) => (
+                                <p key={index}>{item}</p>
+                            ))}
+
+
+                            {experience.clientsWorkedWith && (
+                                <>
+                                    <p className="text-zinc-200">Clients worked with: </p>
+                                    <ul className="list-disc ml-5 space-y-1 text-zinc-200">
+                                        {experience.clientsWorkedWith.map((item, index) => (
+                                            <li className="text-zinc-200" key={index}>{item}</li>
+                                        ))}
+                                    </ul>
+                                </>
+                            )}
+                            {experience.technologies && (
+                                <>
+                                    <p className="mt-4 font-medium">Technologies used: </p>
+                                    <ul className="list-disc ml-5 space-y-1">
+                                        {experience.technologies.map((item, index) => (
+                                            <li className="text-sm text-gray-200" key={index}>{item}</li>
+                                        ))}
+                                    </ul>
+
+
+                                </>
+                            )}
+
+
+                            {/* <figure><img src="/images/stock/photo-1494232410401-ad00d5433cfa.jpg" alt="Album"/></figure> */}
+                          
+                                {experience.website && (
+                                    <div className="card-actions justify-end">
+                                        <Link href={`http://${experience.website}`} target='_blank' >
+                                            <button className="btn btn-primary text-zinc-200 dark:text-zinc-200">{experience.website}</button>
+                                        </Link>
+                                    </div>
+                                )}
+
+                            </div>
                         </div>
                     </VerticalTimelineElement>
                 );

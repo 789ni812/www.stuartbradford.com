@@ -15,6 +15,7 @@ import projectBoost from '@/images/projects/GameProjectBoost.png'
 import taiChiPractice from '@/images/projects/taichi-expert-studying-with-books.avif'
 import WorkHistory from '@/components/Resume/WorkHistory'
 import Skills from '@/components/Skills/Skills'
+import { motion } from "framer-motion"
 
 
 import ProjectList from '@/components/ProjectList'
@@ -119,10 +120,36 @@ export default function Home({ articles }) {
 
             <Container className="mt-9">
                 <div className="max-w-2xl">
+                
                     <h1 className="text-4xl tracking-tight text-teal-700 dark:text-zinc-100 sm:text-5xl font-extrabold  md:text-4xl [text-wrap:balance] bg-clip-text text-transparent bg-gradient-to-r from-teal-700/60 to-50% to-teal-400">
                     
-                        Versatile Full Stack Developer, Technical Project Manager
+                    <motion.span
+                    initial={{ opacity: 0, scale: 0.5, }}
+                    animate={{ opacity: 1, scale: 1,  }}
+                    transition={{ duration: 0.5 }}
+                > Versatile </motion.span> 
+                
+                 Full Stack Developer
+                
+                <motion.span
+                    initial={{ opacity: 0, scale: 0.5, x: -200 }}
+                    animate={{ opacity: 1, scale: 1, x: 0 }}
+                    transition={{ duration: 1 }}
+                >, Technical</motion.span> 
+                  
+                <motion.span
+                    initial={{ opacity: 0, scale: 0.5, x: -200 }}
+                    animate={{ opacity: 1, scale: 1, x: 0 }}
+                    transition={{ duration: 1.5 }}
+                > Project </motion.span> 
+                Manager
                     </h1>
+                  
+                    <motion.div
+                    initial={{ opacity: 0, scale: 1, }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1.75}}
+                >
                     <p className="mt-6  text-zinc-600 dark:text-zinc-400">I&apos;m Stuart, a Full Stack Developer with over two decades of experience in the technology sector. Specialising in development and delivery of digital projects for Web, mobile and just recently VR Development. </p>
 
 
@@ -153,6 +180,7 @@ export default function Home({ articles }) {
                             icon={LinkedInIcon}
                         />
                     </div>
+                    </motion.div>
                 </div>
 
             </Container>
