@@ -235,12 +235,12 @@ const WorkHistory = () => {
                     >
                         {/* <div className="space-y-4"> */}
                         <div className="space-y-4 ">
-                            <div className="flex items-center space-x-4">
+                            <div className="flex items-center space-x-4 prose">
                                 <div>
-                                    <h2 className="text-2xl font-semibold">{experience.jobTitle}</h2>
-                                    <h3 className="text-lg">{experience.company}</h3>
+                                    <h2 className="text-zinc-200 dark:text-zinc-200">{experience.jobTitle}</h2>
+                                    <h3 className="text-zinc-200 dark:text-zinc-200">{experience.company}</h3>
                                     {experience.website && (
-                                        <h4 className=""><Link href={`http://${experience.website}`} target='_blank'>{experience.website}</Link></h4>
+                                        <h4 ><Link href={`http://${experience.website}`} target='_blank' className="text-zinc-200 dark:text-zinc-200">{experience.website}</Link></h4>
                                     )}
                                 </div>
                             </div>
@@ -253,10 +253,10 @@ const WorkHistory = () => {
 
                             {experience.clientsWorkedWith && (
                                 <>
-                                    <p className="mt-4 font-medium">Clients worked with: </p>
-                                    <ul className="list-disc ml-5 space-y-1">
+                                    <p className="text-zinc-200">Clients worked with: </p>
+                                    <ul className="list-disc ml-5 space-y-1 text-zinc-200">
                                         {experience.clientsWorkedWith.map((item, index) => (
-                                            <li className="text-sm text-gray-200" key={index}>{item}</li>
+                                            <li className="text-zinc-200" key={index}>{item}</li>
                                         ))}
                                     </ul>
                                 </>

@@ -103,6 +103,7 @@ export default function Home({ articles }) {
 
     return (
         <>
+
             <Head>
                 <title>
                     Stuart Bradford -  Versatile Full Stack Developer, Technical Project Manager and VR Enthusiast
@@ -118,7 +119,8 @@ export default function Home({ articles }) {
 
             <Container className="mt-9">
                 <div className="max-w-2xl">
-                    <h1 className="text-4xl tracking-tight text-teal-700 dark:text-zinc-100 sm:text-5xl">
+                    <h1 className="text-4xl tracking-tight text-teal-700 dark:text-zinc-100 sm:text-5xl font-extrabold  md:text-4xl [text-wrap:balance] bg-clip-text text-transparent bg-gradient-to-r from-teal-700/60 to-50% to-teal-400">
+                    
                         Versatile Full Stack Developer, Technical Project Manager
                     </h1>
                     <p className="mt-6  text-zinc-600 dark:text-zinc-400">I&apos;m Stuart, a Full Stack Developer with over two decades of experience in the technology sector. Specialising in development and delivery of digital projects for Web, mobile and just recently VR Development. </p>
@@ -166,7 +168,6 @@ export default function Home({ articles }) {
                     <span className="ml-3 mb-6">Projects I&apos;m currently working on</span>
                 </h2>
 
-                {/* <div className="grid grid-cols-1 gap-5 lg:gap-32 p-8  md:grid-cols-2 xl:grid-cols-3"> */}
                 <div className="grid grid-cols-1 gap-5">
                     <ProjectList listType="short" />
                 </div>
