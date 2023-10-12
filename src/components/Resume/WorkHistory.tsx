@@ -219,7 +219,7 @@ const WorkHistory = () => {
         <VerticalTimeline>
             {workHistoryData.map((experience, index) => {
                 const isEvenIndex = index % 2 === 0;
-                const backgroundColor = isEvenIndex ? 'rgb(33, 150, 243)' : 'rgb(255, 99, 71)';
+                const backgroundColor = isEvenIndex ? 'rgb(42,50,60)' : 'rgb(0,43,61)';
                 const color = '#fff';
 
 
@@ -275,9 +275,9 @@ const WorkHistory = () => {
                             )}
                         </div> */}
                         <div className="card lg:card-side bg-base-100 shadow-xl">
-                          <div className="card-body">
-                                <h2 className="card-title">{experience.jobTitle}</h2>
-                                <h3 className="text-zinc-200 dark:text-zinc-200">{experience.company}</h3>
+                          <div >
+                                <h2 style={{color: 'white'}}>{experience.jobTitle}</h2>
+                                <h3 style={{color: 'white'}}>{experience.company}</h3>
                         
 
                             {experience.description.map((item, index) => (

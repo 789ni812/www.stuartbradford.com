@@ -129,13 +129,13 @@ export default function Home({ articles }) {
                     transition={{ duration: 0.5 }}
                 > Versatile </motion.span> 
                 
-                 Full Stack Developer
+                 Full Stack Developer,
                 
                 <motion.span
                     initial={{ opacity: 0, scale: 0.5, x: -200 }}
                     animate={{ opacity: 1, scale: 1, x: 0 }}
                     transition={{ duration: 1 }}
-                >, Technical</motion.span> 
+                > Technical </motion.span> 
                   
                 <motion.span
                     initial={{ opacity: 0, scale: 0.5, x: -200 }}
