@@ -1,12 +1,8 @@
 import { faReact } from '@fortawesome/free-brands-svg-icons'
 import { faHtml5 } from '@fortawesome/free-brands-svg-icons'
-import { faCss3 } from '@fortawesome/free-brands-svg-icons'
 import { faNode } from '@fortawesome/free-brands-svg-icons'
 import { faCode } from '@fortawesome/free-solid-svg-icons'
-import { faShopify } from '@fortawesome/free-brands-svg-icons'
-import { faFile } from '@fortawesome/free-solid-svg-icons'
 import { faFileCode } from '@fortawesome/free-solid-svg-icons'
-import { faChartGantt } from '@fortawesome/free-solid-svg-icons'
 import { faFileCircleCheck } from '@fortawesome/free-solid-svg-icons'
 import { faFileLines } from '@fortawesome/free-solid-svg-icons'
 import { faAnchorCircleExclamation } from '@fortawesome/free-solid-svg-icons'
@@ -52,7 +48,7 @@ export const projects = [
       },
       {
         name: 'Project Boost',
-        ShortDesc: '3D game built with Unity to help me on my jounrey in VR',
+        ShortDesc: '3D game built with Unity to help me on my journey in VR',
         description:
             "To help in learning and better understand how to build games and applications in Virtual Reality I first need to get an understanding of 3D game development. So I recently completed a Unity course on just that. As part of this training course I built a game about flying a rocket through a series of obstacles, using Unity and C#. I've added a couple of tweaks to it and exported it to the web using WebGL. it's very basic, but really helped me understand the basics of 3D game development and has helped me greatly in my VR development practice.",
         technologies: [{ name: "Unity", icon: faUnity },{ name: "C#", icon: faFileLines }],

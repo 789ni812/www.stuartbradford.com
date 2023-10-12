@@ -29,7 +29,7 @@ export default function App({ Component, pageProps, router }) {
       </div>
       <div className="relative flex w-full flex-col sm:px-24">
         <Header />
-        <main className="flex-auto">
+        <main className="flex-auto prose">
           <Component previousPathname={previousPathname} {...pageProps} />
         </main>
         <Footer />
