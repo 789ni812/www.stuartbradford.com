@@ -45,7 +45,7 @@ const CardProject = ({ listType = "" }) => {
                             src={project.imageLogo}
                             alt="#"
 
-                            className='w-full h-auto max-w-2xl relative z-10'
+                            className=' h-auto max-w-lg relative z-10'
                         />
 
                     <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100 ">
