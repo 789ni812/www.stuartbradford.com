@@ -5,6 +5,11 @@ import { Header } from '@/components/Header'
 
 import '@/styles/tailwind.css'
 import 'focus-visible'
+import { Lato } from '@next/font/google';
+const lato = Lato({
+    subsets: ['latin'],
+    weight: ['100', '300', '400','700','900'],
+})
 
 
 function usePrevious(value) {
@@ -29,8 +34,9 @@ export default function App({ Component, pageProps, router }) {
       </div>
       <div className="relative flex w-full flex-col sm:px-24">
         <Header />
-        <main className="flex-auto prose">
-          <Component previousPathname={previousPathname} {...pageProps} />
+        <main className={`flex-auto prose ${lato.className}`}>
+          <Component 
+          previousPathname={previousPathname} {...pageProps} />
         </main>
         <Footer />
       </div>
