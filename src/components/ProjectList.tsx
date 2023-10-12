@@ -25,9 +25,9 @@ const CardProject = ({ listType = "" }) => {
     // return (
     //     <>
     //         {projects.map((project) => (
-                
+
     //             card(project, listType)
-                
+
     //         ))}
 
     //     </>
@@ -37,39 +37,32 @@ const CardProject = ({ listType = "" }) => {
 
             {projects.map((project) => (
                 <Card key={project.name} className="gap-2 relative z-10  items-center justify-center  bg-gray-500 shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-
-
-                    
-
-                     <Image
-                            src={project.imageLogo}
-                            alt="#"
-
-                            className=' h-auto max-w-lg relative z-10'
-                        />
+                    <Image
+                        src={project.imageLogo}
+                        alt="#"
+                        width={460}
+                        className='h-auto relative z-10'
+                    />
 
                     <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100 ">
                         <Card.Link href={project.link.href} target="_blank">{project.name}</Card.Link>
                     </h2>
 
-
                     <p className="mt-2 text-md  text-zinc-800 dark:text-zinc-300 relative z-10">{listType === "short" ? project.ShortDesc : project.description}</p>
 
                     <ul role="list" className="mt-6 flex flex-wrap gap-6 px-4 items-center justify-center text-sm text-zinc-400 relative z-10">
-                            {project.technologies.map((item) => (
-                                <li key={item.name} className="flex flex-col items-center mb-6">
-                                    <FontAwesomeIcon icon={item.icon} className="h-6 w-6" />
-                                    <span className="ml-1 mt-2">{item.name}</span>
-                                </li>
-                            ))}
-                        </ul>
+                        {project.technologies.map((item) => (
+                            <li key={item.name} className="flex flex-col items-center mb-6">
+                                <FontAwesomeIcon icon={item.icon} className="h-6 w-6" />
+                                <span className="ml-1 mt-2">{item.name}</span>
+                            </li>
+                        ))}
+                    </ul>
                     <p className="relative z-10 mb-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 hover:text-2xl dark:text-zinc-200">
                         <LinkIcon className="h-6 w-6 flex-none" />
                         <span className="ml-2 text-lg">{project.link.label}</span>
                     </p>
                 </Card>
-
-
             ))}
 
         </>
@@ -90,14 +83,14 @@ function card(project, listType: string): React.JSX.Element {
                 <Card key={project.name} className="gap-2 relative z-10  items-center justify-center  bg-gray-500 shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
 
 
-                    
 
-                     <Image
-                            src={project.imageLogo}
-                            alt="#"
 
-                            className='w-full h-auto max-w-2xl relative z-10'
-                        />
+                    <Image
+                        src={project.imageLogo}
+                        alt="#"
+
+                        className='w-full h-auto max-w-2xl relative z-10'
+                    />
 
                     <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100 ">
                         <Card.Link href={project.link.href} target="_blank">{project.name}</Card.Link>
@@ -107,13 +100,13 @@ function card(project, listType: string): React.JSX.Element {
                     <p className="mt-2 text-md  text-zinc-800 dark:text-zinc-300 relative z-10">{listType === "short" ? project.ShortDesc : project.description}</p>
 
                     <ul role="list" className="mt-6 flex flex-wrap gap-6 px-4 items-center justify-center text-sm text-zinc-400 relative z-10">
-                            {project.technologies.map((item) => (
-                                <li key={item.name} className="flex flex-col items-center mb-6">
-                                    <FontAwesomeIcon icon={item.icon} className="h-6 w-6" />
-                                    <span className="ml-1 mt-2">{item.name}</span>
-                                </li>
-                            ))}
-                        </ul>
+                        {project.technologies.map((item) => (
+                            <li key={item.name} className="flex flex-col items-center mb-6">
+                                <FontAwesomeIcon icon={item.icon} className="h-6 w-6" />
+                                <span className="ml-1 mt-2">{item.name}</span>
+                            </li>
+                        ))}
+                    </ul>
                     <p className="relative z-10 mb-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 hover:text-2xl dark:text-zinc-200">
                         <LinkIcon className="h-6 w-6 flex-none" />
                         <span className="ml-2 text-lg">{project.link.label}</span>
