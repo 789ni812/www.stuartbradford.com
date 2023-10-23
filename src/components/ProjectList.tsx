@@ -36,7 +36,7 @@ const CardProject = ({ listType = "" }) => {
         <>
 
             {projects.map((project) => (
-                <Card key={project.name} className="gap-2 relative z-10  items-center justify-center  bg-gray-500 shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                <Card key={project.name} className="gap-2 relative z-10  items-center justify-center   shadow-md shadow-zinc-800/5  ring-zinc-900/5 border border-zinc-700/50 bg-zinc-800 ring-0">
                     <Image
                         src={project.imageLogo}
                         alt="#"
@@ -44,11 +44,11 @@ const CardProject = ({ listType = "" }) => {
                         className='h-auto relative z-10'
                     />
 
-                    <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100 ">
+                    <h2 className="mt-6 text-base font-semibold  text-zinc-100 ">
                         <Card.Link href={project.link.href} target="_blank">{project.name}</Card.Link>
                     </h2>
 
-                    <p className="mt-2 text-md  text-zinc-800 dark:text-zinc-300 relative z-10">{listType === "short" ? project.ShortDesc : project.description}</p>
+                    <p className="mt-2 text-md   text-zinc-300 relative z-10">{listType === "short" ? project.ShortDesc : project.description}</p>
 
                     <ul role="list" className="mt-6 flex flex-wrap gap-6 px-4 items-center justify-center text-sm text-zinc-400 relative z-10">
                         {project.technologies.map((item) => (
@@ -58,7 +58,7 @@ const CardProject = ({ listType = "" }) => {
                             </li>
                         ))}
                     </ul>
-                    <p className="relative z-10 mb-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 hover:text-2xl dark:text-zinc-200">
+                    <p className="relative z-10 mb-6 flex text-sm font-medium  transition group-hover:text-teal-500 hover:text-2xl text-zinc-200">
                         <LinkIcon className="h-6 w-6 flex-none" />
                         <span className="ml-2 text-lg">{project.link.label}</span>
                     </p>
@@ -80,7 +80,7 @@ function card(project, listType: string): React.JSX.Element {
         <>
 
             {projects.map((project) => (
-                <Card key={project.name} className="gap-2 relative z-10  items-center justify-center  bg-gray-500 shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                <Card key={project.name} className="gap-2 relative z-10  items-center justify-center   shadow-md shadow-zinc-800/5 ring-zinc-900/5 border border-zinc-700/50 bg-zinc-800 ring-0">
 
 
 
@@ -92,12 +92,12 @@ function card(project, listType: string): React.JSX.Element {
                         className='w-full h-auto max-w-2xl relative z-10'
                     />
 
-                    <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100 ">
+                    <h2 className="mt-6 text-base font-semibold  text-zinc-100 ">
                         <Card.Link href={project.link.href} target="_blank">{project.name}</Card.Link>
                     </h2>
 
 
-                    <p className="mt-2 text-md  text-zinc-800 dark:text-zinc-300 relative z-10">{listType === "short" ? project.ShortDesc : project.description}</p>
+                    <p className="mt-2 text-md  text-zinc-300 relative z-10">{listType === "short" ? project.ShortDesc : project.description}</p>
 
                     <ul role="list" className="mt-6 flex flex-wrap gap-6 px-4 items-center justify-center text-sm text-zinc-400 relative z-10">
                         {project.technologies.map((item) => (
@@ -107,7 +107,7 @@ function card(project, listType: string): React.JSX.Element {
                             </li>
                         ))}
                     </ul>
-                    <p className="relative z-10 mb-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 hover:text-2xl dark:text-zinc-200">
+                    <p className="relative z-10 mb-6 flex text-sm font-medium  transition group-hover:text-teal-500 hover:text-2xl text-zinc-200">
                         <LinkIcon className="h-6 w-6 flex-none" />
                         <span className="ml-2 text-lg">{project.link.label}</span>
                     </p>

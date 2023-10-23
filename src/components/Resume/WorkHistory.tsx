@@ -314,7 +314,7 @@ const WorkHistory = () => {
                                 {experience.website && (
                                     <div className="card-actions justify-end">
                                         <Link href={`http://${experience.website}`} target='_blank' >
-                                            <button className="btn btn-primary text-zinc-200 dark:text-zinc-200">{experience.website}</button>
+                                            <button className="btn btn-primary text-zinc-200">{experience.website}</button>
                                         </Link>
                                     </div>
                                 )}
