@@ -34,3 +34,5 @@ yarn-error.log*
 # generated files
 /public/rss/
 src/styles/inspiration.txt
+
+/.nx/cache/
