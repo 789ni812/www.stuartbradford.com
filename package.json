@@ -1,5 +1,5 @@
 {
-  "name": "tailwindui-template",
+  "name": "Stuartbradford.com",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -45,7 +45,8 @@
     "eslint-config-next": "13.0.2",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.2.8",
-    "nx": "17.0.1"
+    "nx": "17.0.1",
+    "nx-cloud": "latest"
   },
   "nx": {
     "targets": {}
