@@ -87,8 +87,8 @@ const Skills = () => {
     return (
         <>
             <div className="mb-6 max-w-2xl">
-                <h3 className="mb-6  text-teal-700  dark:text-zinc-100">Languages:</h3>
-                <ul role="list" className="mt-3 dark:text-zinc-100">
+                <h3 className="mb-6    text-zinc-100">Languages:</h3>
+                <ul role="list" className="mt-3 text-zinc-100">
 
                     {languages.map((item) => (
                         <li key={item.name} className="col-span-1 flex rounded-md shadow-sm">
@@ -108,8 +108,8 @@ const Skills = () => {
             </div>
 
             <div className="mb-6 max-w-2xl">
-                <h3 className="mb-6  dark:text-zinc-100 text-teal-700">Environments:</h3>
-                <ul role="list" className="mt-3  dark:text-zinc-100">
+                <h3 className="mb-6  text-zinc-100 ">Environments:</h3>
+                <ul role="list" className="mt-3  text-zinc-100">
                     {environments.map((item) => (
                         <li key={item.name} className="col-span-1 flex rounded-md shadow-sm">
                             <div
@@ -131,8 +131,8 @@ const Skills = () => {
 
 
             <div className="mb-6 max-w-2xl">
-                <h3 className="mb-6 dark:text-zinc-100 text-teal-700">Skills:</h3>
-                <ul role="list" className="mt-3 dark:text-zinc-100">
+                <h3 className="mb-6 text-zinc-100">Skills:</h3>
+                <ul role="list" className="mt-3 text-zinc-100">
                     {pm.map((item) => (
                         <li key={item.name} className="col-span-1 flex rounded-md shadow-sm">
                             <div

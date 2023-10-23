@@ -35,4 +35,10 @@ yarn-error.log*
 /public/rss/
 src/styles/inspiration.txt
 
+
+# Nx cache
+nx.json
+workspace.json
+nx.lock
+/nx
 /.nx/cache/
