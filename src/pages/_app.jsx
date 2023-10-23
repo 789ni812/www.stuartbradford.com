@@ -4,6 +4,7 @@ import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 
 import '@/styles/tailwind.css'
+import '@/styles/global.css'
 import 'focus-visible'
 import { Lato } from '@next/font/google';
 const lato = Lato({
@@ -27,14 +28,27 @@ export default function App({ Component, pageProps, router }) {
 
   return (
     <>
-      <div className="fixed inset-0 flex justify-center sm:px-8">
-        <div className="flex w-full max-w-7xl lg:px-8">
-          <div className="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20" />
+      <div className="fixed inset-0 flex justify-center sm:px-8 ">
+        <div className="bg-[#E1E1E1] flex w-full max-w-7xl lg:px-8">
+          <div className="w-full ring-1 bg-zinc-900 ring-zinc-300/20" />
         </div>
       </div>
       <div className="relative flex w-full flex-col sm:px-24">
         <Header />
-        <main className={`flex-auto prose ${lato.className}`}>
+        
+       
+        <main className={`flex-auto prose ${lato.className} z-50` }>
+
+        <video
+          muted
+          loop
+          autoPlay 
+        className="xs:hidden opacity-5 x-auto fixed lg:left-72 "
+        >
+          <source src= '/videos/stuartbradford-hologram.mp4'type="video/mp4" />
+        </video>
+         
+        
           <Component 
           previousPathname={previousPathname} {...pageProps} />
         </main>

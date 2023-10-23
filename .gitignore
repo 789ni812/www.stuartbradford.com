@@ -34,3 +34,25 @@ yarn-error.log*
 # generated files
 /public/rss/
 src/styles/inspiration.txt
+
+# Nx cache
+nx.json
+workspace.json
+nx.lock
+/nx
+
+
+.nx/cache/file-map.json
+.nx/cache/lockfile.hash
+.nx/cache/parsed-lock-file.json
+.nx/cache/project-graph.json
+.nx/cache/d/daemon.log
+.nx/cache/nx-console-project-graph/project-graph.html
+.nx/cache/nx-console-project-graph/static/3rdpartylicenses.txt
+.nx/cache/nx-console-project-graph/static/environment.js
+.nx/cache/nx-console-project-graph/static/favicon.ico
+.nx/cache/nx-console-project-graph/static/main.js
+.nx/cache/nx-console-project-graph/static/polyfills.js
+.nx/cache/nx-console-project-graph/static/runtime.js
+.nx/cache/nx-console-project-graph/static/styles.css
+.nx/cache/nx-console-project-graph/static/styles.js
